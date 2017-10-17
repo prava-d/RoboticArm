@@ -1,2 +1,2 @@
 # RoboticArm
-Final PoE project: robotic arm
+Official repository for the robotic arm final project PoE

@@ -11,8 +11,9 @@ const byte linactuator2 = 4;
 const byte linactuator3 = 5;
 String result="";
 
-// need to change in calibrate
+// need to change and calibrate values
 int irthreshold = 400;
+int touchthreshold = 900;
 
 Servo myservo1;  // create servo object to control a servo
 Servo myservo2;
@@ -41,8 +42,11 @@ void loop() {
   delay(10000);
 
   // when it detects an object, need to calibrate
-  if (analogRead(irsensor) > threshold) {
+  if (analogRead(irsensor) > irthreshold) {
     for (pos = 1000; pos <= 2000; pos += 1) { // goes from 0 degrees to 180 degrees
+      if (analogRead(touchsensor1) > touchthreshold or analogRead(touchsensor2) > touchthreshold or analogRead(touchsensor2) > touchthreshold) {
+       break; 
+      }
       // in steps of 1 degree
       myservo1.writeMicroseconds(pos);              // tell servo to go to position in variable 'pos'
       myservo2.writeMicroseconds(pos);

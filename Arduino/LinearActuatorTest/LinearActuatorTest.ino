@@ -4,16 +4,19 @@
 const byte irsensor = A0;
 const byte touchsensor1 = A1;
 const byte touchsensor2 = A2;
-const byte touchsensor3 = A3;
+//const byte touchsensor3 = A3;
 
 const byte linactuator1 = 3;
-const byte linactuator2 = 4;
-const byte linactuator3 = 5;
+const byte linactuator2 = 5;
+const byte linactuator3 = 6;
+const int maxclose = 1600;
 String result="";
 
+bool handclosed = true;
+
 // need to change and calibrate values
-int irthreshold = 400;
-int touchthreshold = 900;
+int irthreshold = 970;
+int touchthreshold = 950;
 
 Servo myservo1;  // create servo object to control a servo
 Servo myservo2;
@@ -33,31 +36,43 @@ void setup() {
 }
 
 void loop() {
-  pos = 1000;
-  //myservo1.writeMicroseconds(pos);
-  //myservo2.writeMicroseconds(pos);
-  //myservo3.writeMicroseconds(pos);
-  
-  Serial.println(pos);
-  delay(10000);
-
-  // when it detects an object, need to calibrate
-  if (analogRead(irsensor) > irthreshold) {
-    for (pos = 1000; pos <= 2000; pos += 1) { // goes from 0 degrees to 180 degrees
-      if (analogRead(touchsensor1) > touchthreshold or analogRead(touchsensor2) > touchthreshold or analogRead(touchsensor2) > touchthreshold) {
-       break; 
-      }
-      // in steps of 1 degree
-      myservo1.writeMicroseconds(pos);              // tell servo to go to position in variable 'pos'
-      myservo2.writeMicroseconds(pos);
-      myservo3.writeMicroseconds(pos);
-      Serial.println(pos);
-      delay(10);                       // waits 15ms for the servo to reach the position
-    }
+  if(handclosed){
+    pos = 2000;
+    myservo1.writeMicroseconds(pos);
+    delay(800);
+    myservo3.writeMicroseconds(pos);
+    delay(800);
+    myservo2.writeMicroseconds(pos);
+    
+    //Serial.println(pos);
+    delay(7000);
+    handclosed = false;
   }
+  result = result + analogRead(irsensor) + "|" + analogRead(touchsensor1) + "|" + analogRead(touchsensor2);
+  Serial.println(result);
+  result = "";
+  // when it detects an object, need to calibrate
+  if (analogRead(irsensor) < irthreshold) {
+    for (pos = 2000; pos >= maxclose-50; pos -= 1) { // goes from 0 degrees to 180 degrees
+      if (analogRead(touchsensor1) < touchthreshold or analogRead(touchsensor2) < touchthreshold) {
+        break; 
+      }
+      result = result + analogRead(touchsensor1) + "|" + analogRead(touchsensor2) + "|" + pos;
+      Serial.println(result);
+      result = "";
+        // in steps of 1 degree
+      myservo2.writeMicroseconds(max(pos, maxclose));              // tell servo to go to position in variable 'pos'
+      myservo3.writeMicroseconds(max(2000-(2000-pos)*5/3, 2000-(2000-maxclose) * 5/3));
+      myservo1.writeMicroseconds(max(pos+50, maxclose));
+      delay(30);
+    //Serial.println(pos);
+    //delay(2000);                       // waits 15ms for the servo to reach the position
+    }
+    handclosed = true;
+  }
+  if(handclosed){
+    delay(5000);
+  }
+  delay(50);
   
-  //pos = 2000;
-  //myservo.writeMicroseconds(pos);
-  Serial.println(pos);
-  delay(10000);
 }

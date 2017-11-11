@@ -15,12 +15,12 @@ clear;
 % define trapezoid shapes based on bottom, middle, and top length as well as height
 base = [.5; 1; .5; .5];
 mid = [.5; .5; .5; .5];
-tip = [.5; 0; .5; .5];
+tip = [.5; .5; .5; .5];
 
 % Place holes on the fingers
 Hb = [GetTrapPoint(.4, base); GetTrapPoint(1.6, base)];
-Hm = [GetTrapPoint(.4, mid); GetTrapPoint(1.1, mid)];
-Ht = [GetTrapPoint(.4, tip); GetTrapPoint(.9, tip)];
+Hm = [GetTrapPoint(.4, mid); GetTrapPoint(1.15, mid)];
+Ht = [GetTrapPoint(.4, tip); GetTrapPoint(1.1, tip)];
 
 % also set constraints for the fingers;
 Cb = [0 0];

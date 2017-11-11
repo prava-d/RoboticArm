@@ -2,18 +2,18 @@
 clear;
 clf;
 %Setup
-initTh = [pi/6; -pi/6]; %Initial Thetas, should be N long
+initTh = [pi/3; pi/3]; %Initial Thetas, should be N long
 r = [.02 .02]; %Joint Radii, should be N long.
-k = [100 100]; % Spring constants of each of the tendons (Active tends first, then passive), should be L long
-Mdef = [.005 .006]; % Linear deformation caused by motor (how stretched is each string from initial deformation), should be M long
-Lpos = [-.03 .03; zeros(1, length(k))]; % Position of each string (Length L)
+k = [100 100 100 100]; % Spring constants of each of the tendons (Active tends first, then passive), should be L long
+Mdef = [.005 .006 .01 .01]; % Linear deformation caused by motor (how stretched is each string from initial deformation), should be M long
+Lpos = [-.03 .03 -.01 .01; zeros(1, length(k))]; % Position of each string (Length L)
 Jlen = [.05, .05]; % Length of each bone piece after each joint. (Length N)
-Lconnect = [.025 .025]; % Point at which tendons connect on bars (Length L)
+Lconnect = [.025 .035 .045 .05]; % Point at which tendons connect on bars (Length L)
 Jmass = [1 1]; % Mass of each bone piece after each joint (Length N);
-Lang = [-1 1; 1 -1]; %-1 is clockwise around joint; 1 is counter clockwise around joint (Length L)
+Lang = [-1 -1; 1 1 ;-1 1; 1 -1]; %-1 is clockwise around joint; 1 is counter clockwise around joint (L*J)
 Jpos = [0; .05]; %set position for first Joint.
 
-[S, FullTrans] = TransMatGen(initTh, Jlen, Jpos)
+[S, FullTrans] = TransMatGen(initTh, Jlen, Jpos);
 FingerTip = [-.01 .01 .01 -.01 -.01; 0 0 Jlen(end) Jlen(end) 0; ones(1,5)];
 FingerTip = FullTrans(:,:,end)*FingerTip;
 AxLen = .04;
@@ -28,13 +28,17 @@ N = length(initTh); %Number of Joints.
 
 
 %Calculations
-motorForce = k.*Mdef;
-[strPosx, strPosy] = PulleyToStrDirs(FullTrans, r, Lpos, Lang, Lconnect, Jpos, L, N);
+motorForce = k(1:length(Mdef)).*Mdef;
+[strPosx, strPosy] = PulleyToStrPos(FullTrans, r, Lpos, Lang, Lconnect, Jpos, Jlen, L, N);
+JointF = JointForces(motorForce, strPosx, strPosy);
 hold on;
-for i= 1:N
-    ind=2*i
-    plot([strPosx(1,ind-1) strPosx(1,ind)+strPosx(1,ind-1)], [strPosy(1,ind-1) strPosy(1,ind)+strPosy(1,ind-1)], 'b-');
-    plot([strPosx(2,ind-1) strPosx(2,ind)+strPosx(2,ind-1)], [strPosy(2,ind-1) strPosy(2,ind)+strPosy(2,ind-1)], 'r-');
+for i= 1:N+1
+    ind=2*i;
+    plot(strPosx(1,ind-1:ind), strPosy(1,ind-1:ind), 'bo-');
+    plot(strPosx(2,ind-1:ind), strPosy(2,ind-1:ind), 'ro-');
+    plot(strPosx(3,ind-1:ind), strPosy(3,ind-1:ind), 'mo-');
+    plot(strPosx(4,ind-1:ind), strPosy(4,ind-1:ind), 'ko-');
+    
 end
 for i = 1:size(FullTrans,3)
     xax = FullTrans(:,:,i)*Xaxis;

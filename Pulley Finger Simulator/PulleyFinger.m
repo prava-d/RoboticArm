@@ -30,7 +30,7 @@ N = length(initTh); %Number of Joints.
 %Calculations
 motorForce = k(1:length(Mdef)).*Mdef;
 [strPosx, strPosy] = PulleyToStrPos(FullTrans, r, Lpos, Lang, Lconnect, Jpos, Jlen, L, N);
-JointF = JointForces(motorForce, strPosx, strPosy);
+JointF = JointForces(motorForce, strPosx, strPosy, N);
 hold on;
 for i= 1:N+1
     ind=2*i;

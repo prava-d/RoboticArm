@@ -35,7 +35,7 @@ function [ StrPosX StrPosY ] = PulleyToStrPos(Trans, r, Lpos, Lang, Lconnect, Jp
                 firstpos = Trans(:, :, j+1)*TransMat2(theta_cross*-Lang(i, j), [0 0])*[0; r(j); 1]
                 secondpos = Trans(:, :, j+1)*TransMat2(theta_cross*Lang(i, j+1), [0 Jlen(j)])*[0; -r(j+1); 1]
             end
-            StrPosX(i,2*j+1) = firstpos(1)
+            StrPosX(i,2*j+1) = firstpos(1);
             StrPosY(i,2*j+1) = firstpos(2);
             StrPosX(i,2*j+2) = secondpos(1);
             StrPosY(i,2*j+2) = secondpos(2);

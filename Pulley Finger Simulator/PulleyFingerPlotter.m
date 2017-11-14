@@ -5,7 +5,7 @@ clf;
 initTh = [pi/3; pi/3]; %Initial Thetas, should be N long
 r = [.02 .02]; %Joint Radii, should be N long.
 k = [100 100 100 100]; % Spring constants of each of the tendons (Active tends first, then passive), should be L long
-Mdef = [.005 .006 .01 .01]; % Linear deformation caused by motor (how stretched is each string from initial deformation), should be M long
+Mdef = [.005 .005 .005 .005]; % Linear deformation caused by motor (how stretched is each string from initial deformation), should be M long
 Lpos = [-.03 .03 -.01 .01; zeros(1, length(k))]; % Position of each string (Length L)
 Jlen = [.05, .05]; % Length of each bone piece after each joint. (Length N)
 Lconnect = .025*ones(1,4); % Point at which tendons connect on bars (Length L)
@@ -34,7 +34,7 @@ for i = 1:N
 end
 Jpos(:,end) = FullTrans(:,:,end)*[0;Lconnect(1);1];
 
-motorForce = k(1:length(Mdef)).*Mdef;
+motorForce = -k(1:length(Mdef)).*Mdef;
 [strPosx, strPosy] = PulleyToStrPos(FullTrans, r, Lpos, Lang, Lconnect, Jposinit, Jlen, L, N);
 JointF = JointForces(motorForce, strPosx, strPosy, N);
 hold on;

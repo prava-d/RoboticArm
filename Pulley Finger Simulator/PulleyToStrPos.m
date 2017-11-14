@@ -29,11 +29,11 @@ function [ StrPosX StrPosY ] = PulleyToStrPos(Trans, r, Lpos, Lang, Lconnect, Jp
         theta_cross = acos((r(j+1)+r(j))/Jlen(j));
         for i = 1:L
             if Lang(i, j) == Lang(i,j+1)
-                firstpos = Trans(:, :, j+1)*TransMat2((pi/2+theta_same)*-Lang(i, j), [0 0])*[0; r(j); 1]
-                secondpos = Trans(:, :, j+1)*TransMat2((pi/2-theta_same)*Lang(i, j+1), [0 Jlen(j)])*[0; -r(j+1); 1]
+                firstpos = Trans(:, :, j+1)*TransMat2((pi/2+theta_same)*-Lang(i, j), [0 0])*[0; r(j); 1];
+                secondpos = Trans(:, :, j+1)*TransMat2((pi/2-theta_same)*Lang(i, j+1), [0 Jlen(j)])*[0; -r(j+1); 1];
             else
-                firstpos = Trans(:, :, j+1)*TransMat2(theta_cross*-Lang(i, j), [0 0])*[0; r(j); 1]
-                secondpos = Trans(:, :, j+1)*TransMat2(theta_cross*Lang(i, j+1), [0 Jlen(j)])*[0; -r(j+1); 1]
+                firstpos = Trans(:, :, j+1)*TransMat2(theta_cross*-Lang(i, j), [0 0])*[0; r(j); 1];
+                secondpos = Trans(:, :, j+1)*TransMat2(theta_cross*Lang(i, j+1), [0 Jlen(j)])*[0; -r(j+1); 1];
             end
             StrPosX(i,2*j+1) = firstpos(1);
             StrPosY(i,2*j+1) = firstpos(2);

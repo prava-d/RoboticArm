@@ -32,9 +32,9 @@ Yaxis = [0 0;0 AxLen;1 1];
 %% Settings
 Th = [0, 0]; %Initial Thetas, should be N long
 k = [200 200 200 200]; % Spring constants of each of the tendons (Active tends first, then passive), should be L long
-ldef = [.01 .01 .01 .01]; % Linear deformation caused by motor (how stretched is each string from initial deformation), should be M long
-mdef = [.001 000 000 000]; %Acuator Deformation
-steprate = .25;
+ldef = [.05 .05 .05 .05]; % Linear deformation caused by motor (how stretched is each string from initial deformation), should be M long
+mdef = [.0005 000 000 000]; %Acuator Deformation
+steprate = .15;
 simlen = 150;
 drawForces = 1;
 drawStrings = 1;
@@ -42,6 +42,9 @@ drawTransforms = 1;
 drawBones = 1;
 quickStop = 1;
 %% Simulate Finger
+clf;
+close all;
+figure();
 % Initial Calculations
 [~, FullTrans] = TransMatGen(zeros(length(Th),1), Jlen, Jposinit);
 Jpos = zeros(3, N+1);
@@ -63,6 +66,7 @@ l0 = tendLenInit' - ldef;
 % end
 % Jpos(:,end) = FullTrans(:,:,end)*[0;Lconnect(1);1];
 TForce = zeros(L, simlen);
+pltTh = zeros(N, simlen);
 for t = 1:simlen
     [~, FullTrans] = TransMatGen(Th, Jlen, Jposinit);
     Jpos = zeros(3, N+1);
@@ -71,8 +75,8 @@ for t = 1:simlen
     end
     Jpos(:,end) = FullTrans(:,:,end)*[0;Lconnect(1);1];
     [strPosx, strPosy] = PulleyToStrPos(FullTrans, r, Lpos, Lang, Lconnect, Jposinit, Jlen, L, N);
-    [tendLen, adiffLast] = TendLenCalc(r, Jpos(1:2, :), strPosx, strPosy, Lang, adiffLast);
-    TForce(:, t) = k.*(tendLen' - l0);
+    [tendLen, adiffLast] = TendLenCalc(r, Jpos, strPosx, strPosy, Lang, adiffLast);
+    TForce(:, t) = k.*(tendLen'+mdef*t - l0);
     
     JointF = JointForces(TForce(:,t), strPosx, strPosy, N);
     %SOMETHING IS WRONG FROM JOINTF OR ITS DEPENDENCIES
@@ -136,18 +140,25 @@ for t = 1:simlen
     end
     daspect([1,1,1])
     axis([-.1, .1, 0, .2])
-    abs(NScale(2:end)) < .0005
     if (quickStop && all(abs(NScale(2:end)) < .0005))
         TForce(:, t:end) = TForce(:, t)*ones(1,length(TForce - simlen));
         break;
     end
-    
-    Th = Th - NScale(2:end)*steprate;
+    Th = Th - NScale(2:end)'*steprate;
+    pltTh(:, t) = Th;
     getframe;
 end
 figure()
 hold on;
-for l = 1:L
-    plot(1:simlen, TForce(l,:), '-');
+%for l = 1:L
+plot(1:simlen, TForce(1,:), 'b-');
+plot(1:simlen, TForce(2,:), 'r-');
+plot(1:simlen, TForce(3,:), 'm-');
+plot(1:simlen, TForce(4,:), 'k-');
+%2end
+figure();
+hold on;
+for n = 1:N
+    plot(1:simlen, pltTh(n, :), '-');
 end
-legend("LeftActive", "RightActive", "LeftElastic", "RightElastic");
+legend('Joint1','Joint2');

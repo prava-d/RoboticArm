@@ -1,14 +1,13 @@
-#include "opencv2/highgui.hpp"
-#include "opencv2/imgproc.hpp"
 
 #include <vector>
 #include <fstream>
 #include <iostream>
 #include <math.h>
 
+#include <opencv2/opencv.hpp>
 #include "opencv2/video/background_segm.hpp"
-#include "opencv2/highgui.hpp"
-#include "opencv2/imgproc.hpp"
+#include "opencv2/highgui/highgui.hpp"
+#include "opencv2/imgproc/imgproc.hpp"
 
 using namespace cv;
 using namespace std;

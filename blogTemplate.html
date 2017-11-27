@@ -1,20 +1,24 @@
+<!DOCTYPE HTML>
 <!--
-TODO List to make a blog post:
-Update tab name (title tag on ~line 13)
-Fill out header with title, subtitle, date (~line 90)
-Load any pictures you want and caption them (~line 120)
-Save said pictures to the media/images directory in this repo
-Remove any tags not related to the blog post (~line 145)
+  Typify by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
-
-
-<!DOCTYPE html>
 <html>
-<title>Tenacity</title>
-<meta charset="UTF-8">
+  <head>
+    <title>Tenacity</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+  </head>
+
 
 <!-- START NAV BAR -->
 <style>
@@ -82,21 +86,19 @@ and is wrapped around the whole page content, except for the footer in this exam
 
 </div>
 
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+
+<span style="font-size:25px;cursor:pointer;float:right;color:black;font-weight:bold" onclick="openNav()">&#9776; Menu</span>
 <!-- END NAV BAR -->
+  <body>
 
+   <div class="w3-content" style="max-width:1400px">  
 
-
-
-<div class="w3-content" style="max-width:1400px">
-
-
-<!-- Header -->
-<header class="w3-container w3-center w3-padding-32"> 
-  <h1><b>tenacity</b></h1>
-  <p>our vision of a robotic gripper
-
-
+    <!-- Banner -->
+      <section id="banner">
+        <h2><strong>Tenacity<br><h4>Robotic Gripper</h4></strong></h2>
+        <p>Team DeGra - PoE 2017</p>
+      </section>
 
 <!-- Blog entries -->
 <div class="w3-col l8 s12">
@@ -124,8 +126,8 @@ and is wrapped around the whole page content, except for the footer in this exam
 
   <!-- COPY BELOW THIS FOR A NEW PICTURE -->
   <div class="w3-card w3-margin w3-margin-top">
-  	<!-- REPLACE THIS PATH WITH PICTURE PATH -->
-  	<!-- PLAY WITH SCALE AS NEEDED -->
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
   <img src="media/images/test.jpg" style="width:100%">
     <div class="w3-container w3-white">
       <p>THIS IS A CAPTION</p>
@@ -135,7 +137,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 
   <!-- COPY BELOW THIS FOR A NEW PICTURE -->
   <div class="w3-card w3-margin w3-margin-top">
-  	<!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
   <img src="media/images/test.jpg" style="width:100%">
     <div class="w3-container w3-white">
       <p>THIS IS A CAPTION PART 2</p>
@@ -167,15 +169,29 @@ and is wrapped around the whole page content, except for the footer in this exam
 
 
 <!-- END w3-content -->
-</div>
 
-<!-- Footer, currently a nice grey bar, to have github link -->
-<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
-</footer>
 
+    <!-- Footer -->
+      <footer id="footer">
+        <div class="copyright">
+          <a a style="text-decoration:none;"  href="https://github.com/prava-d/RoboticArm">
+            <i class="fa fa-github-square fa-5x"></i>
+          </a>
+          <p></p>
+          <p>Ava Lakmazaheri, Benjamin Ziemann, Prava Dhulipalla, Samantha Eppinger, William Derksen</p>
+        </div>
+      </footer>
+
+    <!-- Scripts -->
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/skel.min.js"></script>
+      <script src="assets/js/util.js"></script>
+      <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+      <script src="assets/js/main.js"></script>
 
 
 <!-- Javascript -->
+</div>
 <script>
 
 //Navbar
@@ -188,6 +204,9 @@ function closeNav() {
 
 //Next javascript element
 </script>
-
-</body>
+  </body>
 </html>
+
+
+
+

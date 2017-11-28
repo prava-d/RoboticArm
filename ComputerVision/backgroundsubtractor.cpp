@@ -5,6 +5,7 @@
 #include <fstream>
 #include <iostream>
 #include <math.h>
+#include <unistd.h>
 
 #include "opencv2/video/background_segm.hpp"
 #include "opencv2/highgui.hpp"
@@ -13,6 +14,7 @@
 using namespace cv;
 using namespace std;
 
+// main function for background subtractor
 int main(int argc, const char** argv)
 {
   
@@ -35,6 +37,8 @@ for(;;){
           else{
 
                cap.retrieve(img, CV_CAP_OPENNI_BGR_IMAGE);
+
+               // sleep(10);
 
               if( foregroundMask.empty() ){
                   foregroundMask.create(img.size(), img.type());

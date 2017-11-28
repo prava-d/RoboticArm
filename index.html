@@ -76,6 +76,7 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 and is wrapped around the whole page content, except for the footer in this example -->
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
   <a href="about.html">About</a>
   <a href="mechanical.html">Mechanical</a>
   <a href="electrical.html">Electrical</a>
@@ -86,19 +87,36 @@ and is wrapped around the whole page content, except for the footer in this exam
 
 </div>
 
-<span style="font-size:25px;cursor:pointer;float:right;color:black;font-weight:bold" onclick="openNav()">&#9776; Menu</span>
+
+
+<span style="font-size:25px;cursor:pointer;float:right;color:white;font-weight:bold;background-color: #800000;
+			text-shadow: 2px 2px #000000;
+			box-shadow:         inset 0 0 25px #000000;
+
+			/*border-style: double solid;
+			border-width: 4px 1px;*/
+			line-height: .01em;
+			/*margin: 0 auto .01em;*/
+			padding: .75em;
+			width: 8%;" onclick="openNav()">&#9776; Menu</span>
 <!-- END NAV BAR -->
 	<body>
 
     <div class="w3-content" style="max-width:1400px">
+
 		<!-- Banner -->
-			<section id="banner">
-				<h2><strong>Tenacity<br><h4>Robotic Gripper</h4></strong></h2>
-				<p>Team DeGra - PoE 2017</p>
-			</section>
+			<a style="text-decoration:none;" href="index.html">
+      <section id="banner" style="background: url(images/finger8.png);background-repeat: no-repeat;
+		background-position: center top;
+		background-size: cover;">
+        <h2><strong>Tenacity<br><h4>Robotic Gripper</br>Team DeGra - PoE 2017</h4></strong></h2>
+        
+      </section>
+    </a>
 
 		<!-- One -->
-			<section id="one" class="wrapper special">
+			<section id="one" class="wrapper special" style="border-style: double solid;
+			border-width: 4px 1px;border-color: #800000;">
 				<div class="inner">
 					<header class="major">
 						<h2>The Project in Review</h2>
@@ -149,7 +167,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 					</div>
 				</div>
 			</section>
-
+</div>
 
 		<!-- Footer -->
 			<footer id="footer">
@@ -170,7 +188,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 			<script src="assets/js/main.js"></script>
 
 
-</div>
+
 <!-- Javascript -->
 <script>
 
@@ -181,6 +199,8 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
+
+
 
 //Next javascript element
 </script>

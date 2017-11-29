@@ -118,27 +118,55 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <!-- Blog entry -->
   <div class="w3-card-4 w3-margin w3-white">
     <div class="w3-container">
-      <h4><b>Forearm</b></h3>
-      <h5>Benjamin Ziemann :: <span class="w3-opacity">October 24, 2017</span></h5>
+      <h4><b>Computer Vision</b></h3>
+      <h5>Prava Dhulipalla:: <span class="w3-opacity">November 25, 2017</span></h5>
     </div>
 
     <div class="w3-container">
-      <p>As the end of sprint I drew near we realized we needed somewhere to store the electronics to create a more aesthetically pleasing and closer to human image deliverable. We thus decided to create a “forearm” to accomplish this as well as provide a sturdy base.
-      </p>
       <p>
-        Going the palm design, we CADed corresponding walls and base to attach to it. Because of the need to house electronics, we made sure to make it hollow as well as include many flat surfaces to provide for mounting of the electronics, along with gaps and small holes to allow for wire management.
-      </p>
-      <p>
-        To actually fabricate it, we used the laser cutter to cut 3/16” medium density fibreboard in the pattern of CAD drawing sheets.
+        If our robotic arm is to take over the world, then we have to give it eyes.
       </p>
 
       <p>
-        We then hot glued the pieces together and bolted on the linear actuators. While the Arduino did end up going on the outside if we were to use this as the final design (we will most likely not due to changing palm design) the order in which we put it together would have allowed for it to be completely enclosed.
+        But somebody, I won’t call them out, but somebody didn’t want to donate their eyes because they needed it to “CAD the robotic hand” and “look at Pittsburgh memes.” Like okay, drama queen, I guess we’ll have to pivot.
       </p>
 
       <p>
-        Further expansion of this forearm will come as we come up with new palm designs and if we decide to take the project further and make a full arm. The addition of a Raspberry Pi to incorporate into the housing will also become a necessity as well. At the very least we will need to have some kind of electronics housing as well as something to lift the gripper to ensure the object grasped will not drop out.
+        However, thankfully the answer is already there - computer vision. The actually very well-documented field of robotics that nobody on my PoE has ever even heard of! Okay well actually Ben and Ava are pretty good at Computer Vision so that’s a lie but lemme feel good about myself.
       </p>
+
+      <p>
+        Anyways, our answer is computer vision! Using video input could expand the things we could do with the robotic arm and potentially allow for more further progress on our stretch goals rather than just start-stop actuation.
+      </p>
+
+
+      <p>
+        However, if you’ve met me before, it wouldn’t do if the task was super easy (it actually is pretty easy, I’m just kind of slow and insistent on understanding when it is clear that maybe I don’t have to learn everything about OpenCV). So, I decided to code in C++. One, because apparently it is better at real-time video processing (however, Python OpenCV calls C++ functions, so maybe if we just stick to the functions given to us, it would be okay - but only using the functions of OpenCV limits us, and sometimes we need to put our own code in there or combine functions or whatever). Two, because I said I wanted to do it and the rest of the team is nice enough to let me do my own thing.
+      </p>
+
+      <p>
+        So - I downloaded OpenCV for C++ and started coding. I even started to use Eclipse! But that was not the best idea - manually importing libraries in order to code is very arduous. So I pivoted away from an IDE towards just using Sublime, which was a bit disappointing but meant I could use my favorite Sublime theme!
+      </p>
+
+      <p>
+        I have many “OpenCV exploration files,” which was just me checking out the various functions of OpenCV. But then it was time to get serious. First, I created a color detection script that interfaced with the Arduino. It would send a start flag if it detected green and a stop flag if it detected red. This was kind of a weird step before object detection, but it made sense at the time. And it worked! And I learned CV! Life was good.
+      </p>
+
+      <p>
+       Now, object detection. The first algorithm I tried was background subtraction. This way, any objections in the forefront would show, and I could simply draw a box around that object. For whatever reason, the first time I tried to implement it failed. So then I moved away from that.
+      </p>
+
+      <p>
+        The second thing way I tried to implement object detection was through edge detection. Now there is a cool guy named Haars . . . I think. Anyway there is an edge detection algorithm called the Haars Cascade algorithm, which I also tried to use. It worked okay - that algorithm is mainly used for feature detection and facial recognition. So, it wasn’t great at determining an object in the forefront, like we had wanted (but excellent at determining every single edge, which we could then extrapolate into many objects).
+      </p>
+
+      <p>
+        Then I pivoted back and tried to do background subtraction, and . . . it worked? I mean I was older by like a week or two, so I guess I must have been wiser . . . anyways, it worked. So then I added some code to draw boxes around the largest object. It works alright - not as well as I hope, but okay enough where it serves as a pretty good starting point. I’m a little hesitant to iterate further because it’s better to test with the mounted camera rather than relying on the webcam - different issues can arise.
+      </p>
+
+      <p>
+        But yeah! That was my journey for computer vision! Also I must point at the fact that even though I’m talking about a topic that could use mainly images to showcase my work, I included the most useless images . . . but I guess this means I’m forced to write another blog post!
+      </p>      
 
     </div>
   </div>
@@ -157,9 +185,10 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <div class="w3-card w3-margin w3-margin-top">
     <!-- REPLACE THIS PATH WITH PICTURE PATH -->
     <!-- PLAY WITH SCALE AS NEEDED -->
-  <img src="../images/palm.PNG" style="width:100%">
+  <img src="../images/eye.jpg" style="width:100%">
     <div class="w3-container w3-white"><p></p>
-      <p align="center">CAD of the palm from which the forearm was designed off of</p>
+      <p align="center">
+These are eyes! I know Oliners sometimes forget about them because we use IR or distance sensors instead, but yeah they are great 👌👌 part of the human anatomy</p>
     </div>
   </div><hr>
   <!-- COPY ABOE THIS FOR A NEW PICTURE -->
@@ -168,34 +197,13 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <div class="w3-card w3-margin w3-margin-top">
     <!-- REPLACE THIS PATH WITH PICTURE PATH -->
     <!-- PLAY WITH SCALE AS NEEDED -->
-  <img src="../images/forearm.png" style="width:100%">
+  <img src="../images/hotdog.png" style="width:100%">
     <div class="w3-container w3-white"><p></p>
-      <p align="center">CAD of the finished forearm</p>
+      <p align="center">It’s called Hot Dog Stand</p>
     </div>
   </div><hr>
   <!-- COPY ABOE THIS FOR A NEW PICTURE -->
 
-  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
-  <div class="w3-card w3-margin w3-margin-top">
-    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
-    <!-- PLAY WITH SCALE AS NEEDED -->
-  <img src="../images/palm.PNG" style="width:100%">
-    <div class="w3-container w3-white"><p></p>
-      <p align="center">Drawing sheets from CAD pieces</p>
-    </div>
-  </div><hr>
-  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
-
-  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
-  <div class="w3-card w3-margin w3-margin-top">
-    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
-    <!-- PLAY WITH SCALE AS NEEDED -->
-  <img src="../images/arm1.jpg" style="width:100%">
-    <div class="w3-container w3-white"><p></p>
-      <p align="center">Finished forearm</p>
-    </div>
-  </div><hr>
-  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
 
 
 
@@ -210,8 +218,9 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     </div>
     <div align=center class="w3-container w3-white">
       <p><p></p>
-        <span class="w3-tag w3-light-grey w3-margin-bottom"><a style="text-decoration:none;" href="../tagMech.html">Mechanical</a></span>
-        <span class="w3-tag w3-light-grey w3-margin-bottom"><a style="text-decoration:none;" href="../tagIntg.html">Integration</a></span>
+      
+        <span class="w3-tag w3-light-grey w3-margin-bottom"><a style="text-decoration:none;" href="../tagSoft.html">Software</a></span>
+
       </p>
     </div>
   </div>

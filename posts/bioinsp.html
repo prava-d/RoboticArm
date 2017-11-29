@@ -118,27 +118,46 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <!-- Blog entry -->
   <div class="w3-card-4 w3-margin w3-white">
     <div class="w3-container">
-      <h4><b>Forearm</b></h3>
-      <h5>Benjamin Ziemann :: <span class="w3-opacity">October 24, 2017</span></h5>
+      <h4><b>Human Inspired Design</b></h3>
+      <h5>William Derksen :: <span class="w3-opacity">November 1, 2017</span></h5>
     </div>
 
     <div class="w3-container">
-      <p>As the end of sprint I drew near we realized we needed somewhere to store the electronics to create a more aesthetically pleasing and closer to human image deliverable. We thus decided to create a “forearm” to accomplish this as well as provide a sturdy base.
-      </p>
       <p>
-        Going the palm design, we CADed corresponding walls and base to attach to it. Because of the need to house electronics, we made sure to make it hollow as well as include many flat surfaces to provide for mounting of the electronics, along with gaps and small holes to allow for wire management.
-      </p>
-      <p>
-        To actually fabricate it, we used the laser cutter to cut 3/16” medium density fibreboard in the pattern of CAD drawing sheets.
+        While our sprint 1 design did manage to primitively pick up objects, the design, mechanics, and motion were not particularly human-like, which was one of our main goals in the hand design.  It was an exceptional first pass, but going into sprint two it was high time to redesign our hand keeping in account what we learned from designing the first pass.
       </p>
 
       <p>
-        We then hot glued the pieces together and bolted on the linear actuators. While the Arduino did end up going on the outside if we were to use this as the final design (we will most likely not due to changing palm design) the order in which we put it together would have allowed for it to be completely enclosed.
+        Going into sprint 2, we were determined to find a new design for our finger that would allow for better motion and gripping.  However, going into this research we thought it important to approach the area from multiple viewpoints.  The main direction we looked at was researching and gathering a collection of research papers testing and suggesting different hand designs.  Meanwhile, we also approached the design problem from a biomimicry perspective.
       </p>
 
       <p>
-        Further expansion of this forearm will come as we come up with new palm designs and if we decide to take the project further and make a full arm. The addition of a Raspberry Pi to incorporate into the housing will also become a necessity as well. At the very least we will need to have some kind of electronics housing as well as something to lift the gripper to ensure the object grasped will not drop out.
+        <b>Initial Steps</b></br>
+        In order to mimic the human hand, we needed to first research how actually a human hand works.  At first we attempted to get an understanding of the specific layout of muscles and tendons in the hand to see if we could gather inspiration or design ideas for the overall hand shape and actuator placement.  However, we found that there were a lot of complex connections between muscles and tendons splitting and joining and not necessarily easily paralleled ways through mechanical systems.  Either way, the specific setup of the physical human hand is quite complex and adds many types of motion that we did not need for our specified grabbing tasks.
       </p>
+
+      <p>
+         <b>Duality of Actuated Forces</b></br>
+         Though we didn’t end up using the layout of tendons that are found in the hand, we did notice a general symmetry in the design of the hand.  Each moving joint generally has at least two tendons associated with it, one to pull the joint in each direction.  We determined this design would allow us to have more specific control over the finger.  However, with control over both sides of each finger that would make our system over actuated and thus more difficult to control and more fragile / prone to snapping strings.
+      </p>
+
+      <p>
+        <b>More Mimicry</b></br>
+        With this realization that the important part of our hand is simply perfecting the grasping, then the question becomes less about the design of the finger and more how the components that allow it to move actually work in the body.  Specifically we were interested in how we could emulate the properties of tendons and muscles and if there were any particular strategies we could use to emulate the motion of the hand.
+      </p>
+
+      <p>
+        We didn’t find too much interesting in the area of emulating muscles simply because they are fairly similar to a linear actuator in motion, while the motion they achieve is through chemical reaction, the motion attained through servos seems to suffice for actuation.  However, the connection from muscle to bones (aka tendons) are elastic, which is a super interesting property in light of over actuation.
+      </p>
+
+      <p>
+        With inelastic strings, over actuation is dangerous because without meticulous control, two strings can be pulling against each other creating extra, unnecessary force in the system, or on the flipside, become slack allowing the joint to flop without control.  However with an elastic tendon like the human hand has, an over actuated system is still hard to control, however the consequence of incorrect control is not snapping or slack, instead it is slight oscillations in the movement of the joints.  This allows for a much more complex system without as much worry about perfect control of said system.
+      </p>
+
+      <p>
+        For a possible stretch goal, we determined that this would be an interesting system to attempt to build, however over actuating the hand is unnecessary for the motion we want from the hand.  Therefore, we will probably stick with a simpler design, but this exploration really helped us get a better understanding of what would work well for a hand design and how we might want to set up the underactuated tendons we end up using.
+      </p>
+      
 
     </div>
   </div>
@@ -157,45 +176,13 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <div class="w3-card w3-margin w3-margin-top">
     <!-- REPLACE THIS PATH WITH PICTURE PATH -->
     <!-- PLAY WITH SCALE AS NEEDED -->
-  <img src="../images/palm.PNG" style="width:100%">
+  <img src="../images/hand1.jpg" style="width:100%">
     <div class="w3-container w3-white"><p></p>
-      <p align="center">CAD of the palm from which the forearm was designed off of</p>
+      <p align="center">The human hand</p>
     </div>
   </div><hr>
   <!-- COPY ABOE THIS FOR A NEW PICTURE -->
 
-  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
-  <div class="w3-card w3-margin w3-margin-top">
-    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
-    <!-- PLAY WITH SCALE AS NEEDED -->
-  <img src="../images/forearm.png" style="width:100%">
-    <div class="w3-container w3-white"><p></p>
-      <p align="center">CAD of the finished forearm</p>
-    </div>
-  </div><hr>
-  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
-
-  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
-  <div class="w3-card w3-margin w3-margin-top">
-    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
-    <!-- PLAY WITH SCALE AS NEEDED -->
-  <img src="../images/palm.PNG" style="width:100%">
-    <div class="w3-container w3-white"><p></p>
-      <p align="center">Drawing sheets from CAD pieces</p>
-    </div>
-  </div><hr>
-  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
-
-  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
-  <div class="w3-card w3-margin w3-margin-top">
-    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
-    <!-- PLAY WITH SCALE AS NEEDED -->
-  <img src="../images/arm1.jpg" style="width:100%">
-    <div class="w3-container w3-white"><p></p>
-      <p align="center">Finished forearm</p>
-    </div>
-  </div><hr>
-  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
 
 
 
@@ -211,7 +198,9 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <div align=center class="w3-container w3-white">
       <p><p></p>
         <span class="w3-tag w3-light-grey w3-margin-bottom"><a style="text-decoration:none;" href="../tagMech.html">Mechanical</a></span>
-        <span class="w3-tag w3-light-grey w3-margin-bottom"><a style="text-decoration:none;" href="../tagIntg.html">Integration</a></span>
+        
+        <span class="w3-tag w3-light-grey w3-margin-bottom"><a style="text-decoration:none;" href="../tagRes.html">Research</a></span>
+     
       </p>
     </div>
   </div>

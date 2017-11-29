@@ -1915,7 +1915,8 @@
 	button,
 	.button {
 		background-color: #f7f7f7;
-		color: #555 !important;
+		color: #666 !important;
+		font-weight: bold;
 	}
 
 		input[type="submit"]:hover,

@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<!--
+  Typify by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+
+<html>
+  <head>
+    <title>Tenacity - Blog</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  </head>
+
+
+<!-- START NAV BAR -->
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+</style>
+<body class="w3-light-grey">
+
+
+
+
+
+<!-- Content of nav bar -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="../index.html">Home</a>
+  <a href="../about.html">About</a>
+  <a href="../mechanical.html">Mechanical</a>
+  <a href="../electrical.html">Electrical</a>
+  <a href="../software.html">Software</a>
+  <a href="../team.html">Team</a>
+  <a href="../blog.html">Blog</a>
+  <a href="../gallery.html">Gallery</a>
+
+</div>
+
+
+<!-- Box around nav bar-->
+<span style="font-size:25px;cursor:pointer;float:right;color:white;font-weight:bold;background-color: rgba(128, 0, 0, 0.6);
+      text-shadow: 2px 2px #000000;
+      box-shadow:         inset 0 0 25px #000000;
+
+      /*border-style: double solid;
+      border-width: 4px 1px;*/
+      line-height: .01em;
+      /*margin: 0 auto .01em;*/
+      padding: .75em;
+      width: 8%;" onclick="openNav()">&#9776; Menu</span>
+<!-- END NAV BAR -->
+
+<body>
+
+
+
+  <!-- Banner -->
+  <a style="text-decoration:none;" href="../index.html">
+      <section id="banner" style="background: url(../images/blogheader.jpg);background-repeat: no-repeat; background-position: center top; background-size: cover">
+      <h2><strong>Tenacity - Blog<br><h4>Robotic Gripper</br>Team DeGra - PoE 2017</h4></strong></h2>
+      </section>
+  </a>
+
+  <!-- Minimized width -->
+  <div class="w3-content" style="max-width:1400px">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container">
+      <h4><b>Research Only Sprint</b></h3>
+      <h5>Prava Dhulipalla :: <span class="w3-opacity">November 14, 2017</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>
+        If you were at our Sprint reviews, you’ll notice that the focus of our Sprint 1 and Spring 2 were very different. Our first sprint was, in large part, mostly mechanical-focused and involved rapidly iterating on an idea until it came together in a final integrated product. In fact, we actually met our MVP in sprint one. This was quite exciting - one thing our team was worried about was scoping, so being able to finish a ‘rough’ MVP in our first sprint signifies that we actually didn’t make our project . . . undoable? (For our MVP, at least. Our stretch goal is another story.)
+      </p>
+
+      <p>
+        However, even if we further iterated on Sprint 1, we realized that many of our proposed additions or iterations would not change our product in any meaningful way - essentially, the challenges we faced with our Sprint 1 product would still exist. Mechanical-wise, this meant that the fingers itself weren’t actually strong or flexible enough to pick up a variety of objects. Electrical-wise, the sensors had managed to work for a reasonable degree - but other than getting better sensors (which wouldn’t be much iteration), there wasn’t much to do. In addition, software was essentially sensory input and actuating the linear actuators, very trivial tasks. Overall, we had reached a standstill with the product as it stood.
+      </p>
+
+      <p>
+        As famed Olin professor Benjamin Linder says, sometimes one must “kill their darlings.” The very robotic arm that we had given life was going to be our downfall. So we had to kill it . . . or something that sounds a little less disturbing.
+      </p>
+
+      <p>
+        Hence, the research-heavy sprint. It was a little silly that we had access to many research papers about the same topic (turns out PhD students have made a lot of headway into the field of robotic arms) and were not using any. It was early on in the project that it wasn’t troublesome to focus on research. So - that’s what we did. For the mechanical subteam, this meant a lot of research on the actual finger. Another blog posts goes more into this, but essentially many papers have attempted to create ‘the perfect finger,’ and some of succeeded. Instead of reinventing the wheel - or rather, the finger - we could just use the results from research papers. Better yet, research papers usually have pretty good documentation and explanation for the reasoning behind the finger, which means our focus on a bioinspired finger design was still doable. It just involved carefully selecting proper research papers to pursue.
+      </p>
+
+      <p>
+        Now when I say that we used the results from research papers, I don’t mean it was as easy as just taking their results. It still took careful understanding of the system, changing it to fit our needs, and then properly testing it before we determined whether the design was a) trash, b) needs more work, or c) perfect. This process was HEAVY, y’all. The mechanical subteam even gained an extra person! (RIP Will.)
+      </p>
+
+      <p>
+        Electrical didn’t need to do that much research, mainly because Ben is a god and knew how to do magical Raspberry Pi stuff. However, using a Raspberry Pi meant that we could explore other ways to finesse our robotic arm to the extreme. I read sources that used the Raspberry Pi in controlling a robotic arm - it wasn’t so much research as it was extra motivation to use the Raspberry Pi, which in general is pretty good at stuff like real-time video processing and could better handle the computer vision stuff we were introducing.
+
+      </p>
+
+      <p>
+        As for computer vision - this was less research as in ‘figure out the different ways we can use it’ (though trust me, there was plenty of that) and more so ‘please allow me to write computer vision code without simply lifting it from the internet’. And we succeeded in that. Go us!
+      </p>
+
+      <p>
+        A lot of other non-research stuff happened to - like we are able to control our robotic arm with a webapp, which is pretty sick. And we did manage to get some other less research-focused and more concrete deliverables. Though it wasn’t the best to not have an integrated product (echoing Aaron Hoover, “what we really want to see for Sprint 2 is an integrated increment), I don’t think that means that we failed. Yeah, I’m a bit of a Negative Nancy (but I really should be Positive Prava), and my team could attest to that, but sometimes you got to take a chance though? At least that it what my team convinced me to believe, and they are some of the best people I know, so why wouldn’t I trust them? But don’t worry - Sprint 3 will be so glorious it’ll make our other deliverables look like literal garbage. That’s a PROMISE.
+      </p>
+      
+
+    </div>
+  </div>
+  <hr>
+</div>
+<!-- END BLOG ENTRIES -->
+
+
+
+
+<!-- BEGIN PICTURES -->
+<div class="w3-col l4">
+
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">CAPTION</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+
+
+
+ </div>
+<!-- END PICTURES -->
+
+
+ <!-- Labels / tags -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4><b>Tags</b></h4>
+    </div>
+    <div align=center class="w3-container w3-white">
+      <p><p></p>
+        <span class="w3-tag w3-light-grey w3-margin-bottom"><a style="text-decoration:none;" href="../tagMech.html">Mechanical</a></span>
+        <span class="w3-tag w3-light-grey w3-margin-bottom"><a style="text-decoration:none;" href="../tagElec.html">Electrical</a></span>
+        <span class="w3-tag w3-light-grey w3-margin-bottom"><a style="text-decoration:none;" href="../tagSoft.html">Software</a></span>
+        <span class="w3-tag w3-light-grey w3-margin-bottom"><a style="text-decoration:none;" href="../tagIntg.html">Integration</a></span> 
+        <span class="w3-tag w3-light-grey w3-margin-bottom"><a style="text-decoration:none;" href="../tagRes.html">Research</a></span>
+        <span class="w3-tag w3-light-grey w3-margin-bottom"><a style="text-decoration:none;" href="../tagTeam.html">Team</a></span>
+      </p>
+    </div>
+  </div>
+
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="copyright">
+      <a a style="text-decoration:none;"  href="https://github.com/prava-d/RoboticArm">
+        <i class="fa fa-github-square fa-5x"></i>
+      </a>
+      <p></p>
+      <p>Ava Lakmazaheri, Benjamin Ziemann, Prava Dhulipalla, Samantha Eppinger, William Derksen</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/skel.min.js"></script>
+  <script src="../assets/js/util.js"></script>
+  <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+  <script src="../assets/js/main.js"></script>
+  <script>
+
+  //Navbar
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+  }
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+
+</body>
+</html>

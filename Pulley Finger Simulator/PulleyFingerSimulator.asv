@@ -30,7 +30,7 @@ Yaxis = [0 0;0 AxLen;1 1];
 
 
 %% Settings
-Th = [pi/2 -pi/2]; %Initial Thetas, should be N long
+Th = [0 0]; %Initial Thetas, should be N long
 k = [200 200]; % Spring constants of each of the tendons (Active tends first, then passive), should be L long
 ldef = [.05 .05]; % Linear deformation caused by motor (how stretched is each string from initial deformation), should be M long
 mdef = [.000 000]; %Acuator Deformation

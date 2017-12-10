@@ -1,4 +1,4 @@
-bool sent = 0; //If data has been sent (and thus motor can move to next position)
+//bool sent = 0; //If data has been sent (and thus motor can move to next position)
 String result=""; //result, to be print in the Serial
 const byte CMD_READ_IR = 1;
 byte cmd_id = 0;
@@ -20,9 +20,14 @@ void loop() {
     case CMD_READ_IR:
       result = result + 1 + "|" + 2;
       Serial.println(result);
-      result = ""; //reset result
-      sent = true; //notify motor to move
+      //sent = true; //notify motor to move
+      break;
+    default:
+      result = result + 0;
+      Serial.println(result);
+      //sent = true; //notify motor to move
       break;
     break;
-  } 
+  }
+  result = ""; //reset result 
 }

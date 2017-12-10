@@ -12,7 +12,7 @@
 
 using namespace cv;
 using namespace std;
-
+/
 // main function for background subtractor
 int main(int argc, const char** argv)
 {

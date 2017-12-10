@@ -28,10 +28,11 @@ void setup() {
   myservo3.attach(motor3);
   myservo4.attach(motor4);
 
-  myservo1.write(120); // this one goes from 50 to 120 (120 upright)
-  myservo2.write(90);  // this one goes from 90 to 180 (90 upright) 
-  myservo3.write(0);  // this once goes from 0 to 90 (0 upright)
-  myservo4.write(0);  // this one goes from 0 to 90 (0 upright --> doesn't really go back down
+  myservo1.write(50); //  (50 upright) // red right
+  myservo2.write(0);  // (0 upright) //wood
+  myservo3.write(0);  //  (0 upright) // red middle
+  myservo4.write(90);  //  (90 upright // orange 3
+
   
   Serial.begin(9600);
 }
@@ -44,19 +45,19 @@ void loop() {
 
   Serial.println(analogRead(ir));
 
-  if (analogRead(ir) < 0)
+  if (analogRead(ir) < irthresh)
   {
-    myservo1.write(50);
-    myservo2.write(180);
+    myservo1.write(0);
+    myservo2.write(90);
     myservo3.write(90);
-    myservo4.write(90);
+    myservo4.write(0);
   }
   else
   {
-    myservo1.write(120); 
-    myservo2.write(90);   
+    myservo1.write(50); 
+    myservo2.write(0);   
     myservo3.write(0);  
-    myservo4.write(0);  
+    myservo4.write(90);  
   }
   
 }

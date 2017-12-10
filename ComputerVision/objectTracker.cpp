@@ -11,7 +11,7 @@ int main(int argc, const char** argv)
 {
 	Ptr<Tracker> tracker;
 
-	tracker = TrackerMIL::create();
+	tracker = Tracker::create("MIL");
 
 	VideoCapture video(0);
 
@@ -24,8 +24,6 @@ int main(int argc, const char** argv)
 	bool ok = video.read(frame);
 
 	Rect2d bbox(200, 200, 200, 200);
-
-	// Rect2d bbox = selectROI(frame, false);
 
 	rectangle(frame, bbox, Scalar(255, 0, 0), 2, 1);
 	imshow("Tracking", frame);

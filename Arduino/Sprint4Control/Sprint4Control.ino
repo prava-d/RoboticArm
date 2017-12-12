@@ -13,7 +13,7 @@ const byte motor3 = 6;
 const byte motor4 = 10;
 
 // sensor / threshold values
-const int irthresh = 850;
+const int irthresh = 900;
 const int touchthresh = 820;
 
 // create Servo objects
@@ -28,10 +28,10 @@ void setup() {
   myservo3.attach(motor3);
   myservo4.attach(motor4);
 
-  myservo1.write(50); //  (50 upright) // red right
-  myservo2.write(0);  // (0 upright) //wood
-  myservo3.write(0);  //  (0 upright) // red middle
-  myservo4.write(90);  //  (90 upright // orange 3
+  myservo1.write(0); //  (180 upright) // red right
+  myservo2.write(0);  // (0 upright; 90 down, little slack) //wood
+  myservo3.write(0);  //  (0 upright, 180 down, slack for most of this range,) // red middle
+  myservo4.write(180);  //  (90 upright // orange 3
 
   
   Serial.begin(9600);
@@ -47,17 +47,17 @@ void loop() {
 
   if (analogRead(ir) < irthresh)
   {
-    myservo1.write(0);
-    myservo2.write(90);
-    myservo3.write(90);
-    myservo4.write(0);
+    myservo1.write(0); 
+    myservo2.write(90);   
+    myservo3.write(180);  
+    myservo4.write(0);  
   }
   else
   {
-    myservo1.write(50); 
-    myservo2.write(0);   
-    myservo3.write(0);  
-    myservo4.write(90);  
+    myservo1.write(180);
+    myservo2.write(0);
+    myservo3.write(0);
+    myservo4.write(180);
   }
   
 }

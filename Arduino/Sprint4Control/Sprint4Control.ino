@@ -1,63 +1,76 @@
 #include <Servo.h>
 
-// pins to connect sensors
+//Digital port
+const byte thumbP= 5;
+const byte midP = 6;
+const byte topP = 9;
+const byte botP = 10;
+const byte linAct = 11;
+
+//Analog ports
 const byte ir = A0;
-const byte touch1 = A1;
-const byte touch2 = A2;
-const byte touch3 = A3;
+const byte thumbRes = A1;
+const byte topRes = A2;
+const byte midRes = A3;
+const byte botRes = A4;
 
-// pins to connet servo
-const byte motor1 = 3;
-const byte motor2 = 5;
-const byte motor3 = 6;
-const byte motor4 = 10;
+//Servo objects
+Servo thumb;
+Servo top;
+Servo mid;
+Servo bot;
+Servo wrist; //Actually linear actuator
 
-// sensor / threshold values
-const int irthresh = 900;
-const int touchthresh = 820;
 
-// create Servo objects
-Servo myservo1;
-Servo myservo2;
-Servo myservo3;
-Servo myservo4;
+const int startPos = 30; //TODO find starting position
+
+const int linLower = 1050; //Lower bound of the linear actuator
+const int linUpper = 1950; //Upper bound of the linear actuator
+
+const int irThresh = 800;
+
+void setFingers(int th, int t, int m, int b){
+  thumb.write(th);
+  top.write(t);
+  mid.write(m);
+  bot.write(b);
+}
 
 void setup() {
-  myservo1.attach(motor1);
-  myservo2.attach(motor2);
-  myservo3.attach(motor3);
-  myservo4.attach(motor4);
-
-  myservo1.write(0); //  (180 upright) // red right
-  myservo2.write(0);  // (0 upright; 90 down, little slack) //wood
-  myservo3.write(0);  //  (0 upright, 180 down, slack for most of this range,) // red middle
-  myservo4.write(180);  //  (90 upright // orange 3
-
-  
   Serial.begin(9600);
+  
+  thumb.attach(thumbP);
+  top.attach(topP);
+  mid.attach(midP);
+  //bot.attach(botP);
+  wrist.attach(linAct);
+
+  setFingers(0,180,90,0);
+  wrist.writeMicroseconds(linLower);    
+  
 }
 
 void loop() {
-//  myservo1.write(180);
-//  myservo2.write(0);
-//  myservo3.write(120);
-//  myservo4.write(130);
+  
+  int currIR = analogRead(ir);
 
-  Serial.println(analogRead(ir));
-
-  if (analogRead(ir) < irthresh)
+  if (currIR < irThresh)
   {
-    myservo1.write(0); 
-    myservo2.write(90);   
-    myservo3.write(180);  
-    myservo4.write(0);  
+    thumb.write(0); 
+    top.write(180);   
+    mid.write(0);  
+    bot.write(180);
+    wrist.writeMicroseconds(linUpper);
   }
-  else
+   else
   {
-    myservo1.write(180);
-    myservo2.write(0);
-    myservo3.write(0);
-    myservo4.write(180);
+    thumb.write(90);
+    top.write(0);    
+    mid.write(180);  
+    bot.write(0);
+    wrist.writeMicroseconds(linLower);    
   }
+     
+  delay(50);
   
 }

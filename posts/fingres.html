@@ -1,0 +1,461 @@
+<!DOCTYPE HTML>
+<!--
+  Typify by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+
+<html>
+  <head>
+    <title>Tenacity - Blog</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  </head>
+
+
+<!-- START NAV BAR -->
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+</style>
+<body class="w3-light-grey">
+
+
+
+
+
+<!-- Content of nav bar -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="../index.html">Home</a>
+  <a href="../about.html">About</a>
+  <a href="../mechanical.html">Mechanical</a>
+  <a href="../electrical.html">Electrical</a>
+  <a href="../software.html">Software</a>
+  <a href="../team.html">Team</a>
+  <a href="../blog.html">Blog</a>
+  <a href="../gallery.html">Gallery</a>
+
+</div>
+
+
+<!-- Box around nav bar-->
+<span style="font-size:25px;cursor:pointer;float:right;color:white;font-weight:bold;background-color: rgba(128, 0, 0, 0.6);
+      text-shadow: 2px 2px #000000;
+      box-shadow:         inset 0 0 25px #000000;
+
+      /*border-style: double solid;
+      border-width: 4px 1px;*/
+      line-height: .01em;
+      /*margin: 0 auto .01em;*/
+      padding: .75em;
+      width: 10%;" onclick="openNav()">&#9776; Menu</span>
+<!-- END NAV BAR -->
+
+<body>
+
+
+
+  <!-- Banner -->
+  <a style="text-decoration:none;" href="../index.html">
+      <section id="banner" style="background: url(../images/blogheader.jpg);background-repeat: no-repeat; background-position: center top; background-size: cover">
+      <h2><strong>Tenacity - Blog<br><h4>Robotic Gripper</br>Team DeGra - PoE 2017</h4></strong></h2>
+      </section>
+  </a>
+
+  <!-- Minimized width -->
+  <div class="w3-content" style="max-width:1400px">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container">
+      <h4><b>To Make a Finger</b></h3>
+      <h5>Ava Lakmazaheri :: <span class="w3-opacity">November 10, 2017</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>
+        We ended Sprint 1 with a robot hand that successfully picked up two different objects using a synchronous curling motion. Though operational, this was ill-fitted for our task of handling a variety of objects in an anthropomorphic way. Thus, to fit our original project goals, we needed a drastic redesign of our finger. 
+      </p>
+      <p>
+        What we didn’t have was a technical understanding of how to implement our design goals. In order to pick up different objects with various grip strengths, we need to understand:
+        <ul>
+          <li>What grips are used by humans for different objects?</li>
+          <li>What motion is required for these grips?</li>
+          <li>How does grip force work?</li>
+          <li>Does it need servos as opposed to linear actuators?</li>
+          <li>Do digits need independent actuation?</li>
+        </ul>
+      </p>
+      <p>
+        Synthesizing this knowledge will allow us to make a more informed decision about the most effective and robust design for our fingers.
+      </p>
+       <p>
+        <b>Research</b></br>
+        After reading many articles on robotic hands and prosthetics, we summarize our findings for the questions below.
+      </p>
+       <p>
+        <i>What grips are used for different objects?</i></br>
+        There are many different configurations that the human hand can take, but typical activities of daily living (ADLs), which commercial prosthetics aim to provide, are handled with the grips illustrated below.
+      </p>
+       <p>
+        <i>What motion is required for these grips?</i></br>
+        Here we are concerned with capturing the behavior of the interphalangeal joints. Illustrated below, these are the distal interphalangeal joints (DIP),  proximal interphalangeal joints (PIP), and metacarpophalangeal joints (MCP).
+      </p>
+       <p>
+        An <a href="https://www.rehab.research.va.gov/jour/2013/505/page599.html">article</a> we found states, “The PIP to MCP ratio controls how the fingers wrap around objects of different size. In human hand motion, the MCP to PIP motion ratio is different during grasp acquisition motions for objects of different size”
+      </p>
+      <p>
+        <i>Do digits need independent actuation?</i></br>
+        Unsurprisingly, the answer to this question depends on the desired motion of the digits. One <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.724.264&rep=rep1&type=pdf">paper</a> states “In order for a hand to accomplish all grasping patterns (shown above), each individual finger flexion motion must be controlled with an independent actuator that is not coupled to the other fingers”. But, in order to accomplish all but the finger point, we can use fixed motion between the digits!
+      </p>
+
+       <p>
+        With this knowledge, we began to explore the theory behind underactuated systems for anthropomorphic robotics. <a href="https://arxiv.org/ftp/arxiv/papers/1301/1301.4394.pdf">Odhner et al. </a> nicely summarize their findings.
+      </p>
+      <p>
+        <i>Underactuated vs. Overactuated Systems </i></br>
+        "Because [overactuated systems] focus on guaranteeing that a hand can perform all possible grasping and manipulation tasks, principles such as strict anthropomorphism and kinematic/force synthesis lend little insight into which tasks matter most, and which design choices strongly affect the performance of these tasks. As a consequence, general-purpose hands often include a dozen or more actuators and elaborate transmission and sensing systems, resulting in hands that are heavy, expensive, and fragile. Problems of control are complicated by the vast number of sensor signals and actuators that must be coordinated in order to perform even a simple task. The complexity, fragility and expense of these hands also discourage [overactuated systems]."
+
+      </p>
+        What does this mean for us? We will certainly not be using a fully actuated system. Personal experience and recommendations from others suggest that the control required for a fully actuated system is not worth it, and that the system is extremely brittle and likely to break - not the robust behavior we seek!
+
+      <p>
+        Research on grip force suggested we switch our linear actuators out for motors to enable pulse mode control.  To increase holding force, we send pulses of power to the motor as it is stalled, effectively ratcheting the system. 
+      </p>
+
+      <p>
+        For robust actuation, many articles recommend brushed DC motors in conjunction with nonbackdriveable mechanisms (e.g, worm gears), to maintain high grip force without continuing to draw current. 
+      </p>
+
+      <p>
+        Another key finding from the exploration of underactuated systems was the property of compliance. 
+      </p>
+
+       <p>
+        In the realm of underactuated systems, compliant joints seem ideal to vary the behavior of the hand when it is in contact with any object (i.e., when subjected to a novel contact force). 
+      </p>
+
+       <p>
+        Additionally, considering compliance in terms of the gripping surface allows for increased surface area in contact with our object. Here we drew inspiration from the universal gripper and the FESTO fingripper. 
+      </p>
+
+       <p>
+         <b>Finger Design</b></br>
+        With a better understanding of the considerations of prosthetic hand design, we began to look into existing anthropomorphic devices that resemble our goals.
+      </p>
+
+       <p>
+        As with nearly anything in mechanical design, there is not only one solution that fits our desired behavior! Below are samples of anthropomorphic prosthetic devices we found, with common features including four-bar linkages, cascading linkages, and spring systems.
+      </p>
+
+       <p>
+        To better understand how these mechanism work, we attempted to model the linkages in Solidworks. Confusingly, their range did not appear drastically different from a simple rotating link. This led us to question the design advantage of the four bar linkages that appear so prominently in the market. Since it did not address our impetus for the design change, we pushed further and dug into tendon-actuated systems.
+      </p>
+
+       <p>
+        Here, our core of understanding comes from the work done by Ozawa, Hashirii & Kobayashi in their <a href="http://ieeexplore.ieee.org/document/5152222/?reload=true">paper</a> Design and control of underactuated tendon-driven mechanisms. 
+      </p>
+
+        <p>
+          They detail basic tendon kinematics: passive tendons are unactuated and elastic, where tensile force depends on deflection. Active tendons, whether stiff or elastic, are connected to an actuator and can thus generate any positive tensile force.
+      </p>
+
+        <p>
+          The article continues to detail different types of tendon-driven mechanisms, namely tendon-controllable, hybrid active/passive tendons, and under-tendon types.
+      </p>
+
+        <p>
+          Our great finding from this work was the potential of a hybrid active/passive tendon system to perform our desired, variable, anthropomorphic motion. The active tendons move the PIP and DIP joints dependently in free motion, mirroring our finger curling mechanism from Sprint 1. However, the addition of passive tendons allow the joints to move independently when the finger comes in contact with an object.
+      </p>
+
+      <p>
+        With all of this taken into consideration, we rounded out Sprint 2 with a vast amount of mechanical research under our belt and an implementation for a new finger that is capable of fully addressing our design goals.
+      </p>
+
+      <p>
+        We will go into Sprint 3 by continuing to refine and fabricate this finger design, integrate it on an anthropomorphic palm, and investigate compliant outer materials for improved gripping performance. If necessary, we can also increase its strength by gearing up the finger and incorporating nonbackdriveable mechanisms.
+      </p>
+
+      <p>
+        Hopefully, with this integrated version, we can continue to implement findings from the research described above, including programming the hand to perform different grasping motions and increasing its grip force via ratcheting.
+      </p>
+      
+
+    </div>
+  </div>
+  <hr>
+</div>
+<!-- END BLOG ENTRIES -->
+
+
+
+
+<!-- BEGIN PICTURES -->
+<div class="w3-col l4">
+
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/finger1.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Gripping styles</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/finger2.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Grip types for manipulation of objects</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/finger3.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Digit breakdown</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/finger4.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Joint movement</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/finger5.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Human analog</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/finger6.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Soft robotic gripper, very un-human</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/finger7.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">FESTO finger</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/finger8.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">4 Common Approaches: four-br linkage, cascading linkage, spring, geared</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/finger9.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Multi-liake finger design</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/finger10.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Spring finger system diagram</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/finger11.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Tendon usages in fingers</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/finger12.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Human-mechanical tendon comparision</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/finger13.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">CAD of our current finger</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/finger14.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">The controllable printed finger</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+
+
+
+
+
+ </div>
+<!-- END PICTURES -->
+
+
+ <!-- Labels / tags -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4><b>Tags</b></h4>
+    </div>
+    <div align=center class="w3-container w3-white">
+      <p><p></p>
+        <span class="w3-tag w3-light-grey w3-margin-bottom"><a style="text-decoration:none;" href="../tagMech.html">Mechanical</a></span>
+        
+        <span class="w3-tag w3-light-grey w3-margin-bottom"><a style="text-decoration:none;" href="../tagRes.html">Research</a></span>
+
+      </p>
+    </div>
+  </div>
+
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="copyright">
+      <a a style="text-decoration:none;"  href="https://github.com/prava-d/RoboticArm">
+        <i class="fa fa-github-square fa-5x"></i>
+      </a>
+      <p></p>
+      <p>Ava Lakmazaheri, Benjamin Ziemann, Prava Dhulipalla, Samantha Eppinger, William Derksen</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/skel.min.js"></script>
+  <script src="../assets/js/util.js"></script>
+  <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+  <script src="../assets/js/main.js"></script>
+  <script>
+
+  //Navbar
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+  }
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+
+</body>
+</html>

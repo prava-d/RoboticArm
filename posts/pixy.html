@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<!--
+  Typify by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+
+<html>
+  <head>
+    <title>Tenacity - Blog</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  </head>
+
+
+<!-- START NAV BAR -->
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+</style>
+<body class="w3-light-grey">
+
+
+
+
+
+<!-- Content of nav bar -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="../index.html">Home</a>
+  <a href="../about.html">About</a>
+  <a href="../mechanical.html">Mechanical</a>
+  <a href="../electrical.html">Electrical</a>
+  <a href="../software.html">Software</a>
+  <a href="../team.html">Team</a>
+  <a href="../blog.html">Blog</a>
+  <a href="../gallery.html">Gallery</a>
+
+</div>
+
+
+<!-- Box around nav bar-->
+<span style="font-size:25px;cursor:pointer;float:right;color:white;font-weight:bold;background-color: rgba(128, 0, 0, 0.6);
+      text-shadow: 2px 2px #000000;
+      box-shadow:         inset 0 0 25px #000000;
+
+      /*border-style: double solid;
+      border-width: 4px 1px;*/
+      line-height: .01em;
+      /*margin: 0 auto .01em;*/
+      padding: .75em;
+      width: 10%;" onclick="openNav()">&#9776; Menu</span>
+<!-- END NAV BAR -->
+
+<body>
+
+
+
+  <!-- Banner -->
+  <a style="text-decoration:none;" href="../index.html">
+      <section id="banner" style="background: url(../images/blogheader.jpg);background-repeat: no-repeat; background-position: center top; background-size: cover">
+      <h2><strong>Tenacity - Blog<br><h4>Robotic Gripper</br>Team DeGra - PoE 2017</h4></strong></h2>
+      </section>
+  </a>
+
+  <!-- Minimized width -->
+  <div class="w3-content" style="max-width:1400px">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container">
+      <h4><b>Pixy Power</b></h3>
+      <h5>Benjamin Ziemann :: <span class="w3-opacity">November 14, 2017</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>
+        As object detection was continuing, we decided to take a brief look at some other options for object detection. One of these included the use of the Pixie Camera, a small Arduino and Linux compatible camera that can recognize and threshold for up to 7 colors and dozens of objects in frame within those color thresholds.
+      </p>
+
+      <p>
+        After a bit of setup, we got it to work both on Ubuntu and Raspberry Pi. Using Pixymon, the camera’s GUI, we could see and learn how it was tracking objects. Besides visually tracking objects on the screen, it also provides convenient bounding boxes for each instance of the color, which can then be tagged for tracking. These bounding boxes also each have their associated coordinates which are directly accessible.
+      </p>
+
+      <p>
+        Unfortunately while incredible for doing what it advertises it does, this does not quite meet our attempts to identify the material of an object, rather just that it is there or not.
+      </p>
+      
+
+    </div>
+  </div>
+  <hr>
+</div>
+<!-- END BLOG ENTRIES -->
+
+
+
+
+<!-- BEGIN PICTURES -->
+<div class="w3-col l4">
+
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/pixy2.jpg" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">The Pixy Camera</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+   <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/pixy.jpg" style="width:100%" data-rotate="180" >
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Pixymon on my laptop</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+
+
+
+ </div>
+<!-- END PICTURES -->
+
+
+ <!-- Labels / tags -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4><b>Tags</b></h4>
+    </div>
+    <div align=center class="w3-container w3-white">
+      <p><p></p>
+        
+        <span class="w3-tag w3-light-grey w3-margin-bottom"><a style="text-decoration:none;" href="../tagSoft.html">Software</a></span>
+       
+        <span class="w3-tag w3-light-grey w3-margin-bottom"><a style="text-decoration:none;" href="../tagRes.html">Research</a></span>
+       
+      </p>
+    </div>
+  </div>
+
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="copyright">
+      <a a style="text-decoration:none;"  href="https://github.com/prava-d/RoboticArm">
+        <i class="fa fa-github-square fa-5x"></i>
+      </a>
+      <p></p>
+      <p>Ava Lakmazaheri, Benjamin Ziemann, Prava Dhulipalla, Samantha Eppinger, William Derksen</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/skel.min.js"></script>
+  <script src="../assets/js/util.js"></script>
+  <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+  <script src="../assets/js/main.js"></script>
+  <script>
+
+  //Navbar
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+  }
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+
+</body>
+</html>

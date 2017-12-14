@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<!--
+  Typify by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+
+<html>
+  <head>
+    <title>Tenacity - Blog</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  </head>
+
+
+<!-- START NAV BAR -->
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+</style>
+<body class="w3-light-grey">
+
+
+
+
+
+<!-- Content of nav bar -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="../index.html">Home</a>
+  <a href="../about.html">About</a>
+  <a href="../mechanical.html">Mechanical</a>
+  <a href="../electrical.html">Electrical</a>
+  <a href="../software.html">Software</a>
+  <a href="../team.html">Team</a>
+  <a href="../blog.html">Blog</a>
+  <a href="../gallery.html">Gallery</a>
+
+</div>
+
+
+<!-- Box around nav bar-->
+<span style="font-size:25px;cursor:pointer;float:right;color:white;font-weight:bold;background-color: rgba(128, 0, 0, 0.6);
+      text-shadow: 2px 2px #000000;
+      box-shadow:         inset 0 0 25px #000000;
+
+      /*border-style: double solid;
+      border-width: 4px 1px;*/
+      line-height: .01em;
+      /*margin: 0 auto .01em;*/
+      padding: .75em;
+      width: 10%;" onclick="openNav()">&#9776; Menu</span>
+<!-- END NAV BAR -->
+
+<body>
+
+
+
+  <!-- Banner -->
+  <a style="text-decoration:none;" href="../index.html">
+      <section id="banner" style="background: url(../images/blogheader.jpg);background-repeat: no-repeat; background-position: center top; background-size: cover">
+      <h2><strong>Tenacity - Blog<br><h4>Robotic Gripper</br>Team DeGra - PoE 2017</h4></strong></h2>
+      </section>
+  </a>
+
+  <!-- Minimized width -->
+  <div class="w3-content" style="max-width:1400px">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container">
+      <h4><b>Finger Simulation</b></h3>
+      <h5>William Derksen :: <span class="w3-opacity">November 30, 2017</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p><b>Backing Up From Prototyping</b></br>
+        In our first sprint we took a very hands on approach to our robotic hand problem by making the best we could come up with of a robotic hand.  It was done as fast as we could without significant thought put into the specific design of the fingers.  We focused on prototyping, and while this got us to our MVP, it left a lot of design questions that we hadn’t addressed and many decisions made haphazardly, without intention.  Thus our goal for the next sprint was to try different designs and explore how to approach and solve the questions we had.
+      </p>
+
+      <p>
+        Making a prototype for our robotic fingers and hands is a time consuming process involving a lot of tedious 3D printing and general setup.  There is a lot that can go wrong, many complications that can arise, making it a bit of a dreaded process.  So, instead of coming up with designs and immediately trying to implement them, we instead figured that it would be best to test everything we can with less time consuming techniques if possible before initiating the prototyping step.  We needed a way to gain insight without touching anything, doing too much work, or spending too much time.
+      </p>
+
+      <p>
+        Our obvious solution was to simulate finger designs!  We know the dimensions of the fingers, the math and physics bound to them and thus should be able to theoretically determine how the system would react to inputs and change finger orientation.  Using a simulation allows us to determine if a design gives a desired motion before coming to the conclusion that we wish to use it.  It also allows us to determine spring values and change part dimensions by testing parameters and determining what works best for our desired motion.
+      </p>
+
+      <p><b>Initial Finger Design</b></br>
+        While starting to research new finger designs, we created a simulation of our current finger design and how it generally interacts.  It was simulated by determining the holes at which string would pass through each of the finger joints and how that string applied forces onto the finger.  In order to save time and verify quickly, we didn’t actually go through the process of finding equations of motion for our finger with the exact values as in, the velocity of the finger and positioning of the finger Instead we assumed the velocity never became to high, since the linear actuator pulled very slowly.  Then we determined the direction of motion based on the geometry of the finger, moved the joints in their directions of motion by fixed amounts, and then repeated numerous times.  While this didn’t show the dynamics of the finger, such as weather it oscillates or any kind of acceleration / velocity information, it did show us the desired equilibrium of the finger based on how pulled the string was.
+      </p>
+
+      <p>
+        This process helped us to understand the motion of the finger and how the hole locations had an effect on the motion through which the finger contracted.  However, this model didn’t give us much needed insight on the amount of force our string would be experiencing, nor show the actual motion of the finger as it would happen in real life.  Additionally, we were moving to bigger and better designs by this point, so further work on this finger ceased.
+      </p>
+
+      <p>
+       After some research, our most promising new direction was a tendon actuated pulley finger.  This finger achieves motion through active tendons connected to actuators, and passive tendons connected without any actuators.  The tendons are each wrapped around each pulley between the joints in a clockwise or counterclockwise orientation, this orientation along with the spring constants of the springs and dimensions of the finger determine how the finger reacts to the strings being pulled.  This was a much more complex system than our initial finger, but it was imperative that we simulate it in order to know how we should go about making decisions for each of the small pieces of the design.  Additionally, we didn’t have very good intuition for how this particular system would interact when strings are pulled so it was important to simulate to start to understand how the system would move, but moreover why the system would move.
+
+      </p>
+
+      <p><b>Understanding the system</b></br>
+        
+One of the important philosophies of making simulations is parameterizing.  We didn’t know how the system worked so we didn’t know what we’d want to change about it in the future, thus it was really important to nail down the core of the system without locking in place anything that could be changed without fundamentally changing the system.  In this system, the main location where forces are occuring is on the pulley subsections, which generates torques on the joints they are connected to.  This specification allowed us to start to understand what was essential and what was malleable in our system.
+
+      </p>
+
+      <p><b>Newtonian Approach</b></br>
+       Originally we attempted to model the system using newtonian forces.  This seemed like a good plan at first since forces were familiar and understandable.  However, the process quickly got a lot more confusing than it needed to with particular string geometry and transformations needing to be calculated at each iteration of the process.  To put it lightly, it was a nightmare.  After some point, in order to try to get something simpler to work we took a similar approach as the initial finger design.  We attempted to find the equilibrium where the finger wouldn’t move by taking iterative steps in the direction the finger was experiencing force in.  This, similarly to the initial finger simulation, shouldn’t have shown any kind of velocity in the finger or had major oscillations.  However when we attempted to do this, we found the finger oscillated as if it had velocity which made no sense for the calculations taking place.  Anyway, the point is, the entire process was arduous and wasn’t leading anywhere.  We decided it was time to take another approach.
+      </p>
+
+      <p><b>Lagrangian Approach</b></br>
+       After consulting some professors, we looked into a different method of dynamics calculation called the Lagrangian method.  While there is some interesting math behind the Lagrangian method, the main idea is that instead of focusing on forces and torques to define a system, we focus on the energy exhibited by the system.  Specifically the kinetic and potential energy (and friction energy in a way).  This allows us to define how the energy of the system changes as our finger moves.
+
+      </p>
+
+      <p>
+       One crucially important aspect of the lagrangian method is that we aren’t required to define our movement in cartesion or even traditional polar coordinates.  We can use generalized coordinates in our calculations, which can make calculations incredibly easier.  In order to use this method we defined on theta coordinate for each bone of the finger that could rotate, and proceeded to define the kinetic and potential energy of the system.  We simplified our simulation further before this step by assuming each of the bones acted like a massless rod with a point mass at the tip of it.  We plan to change this simplification soon, but the model simplified well given point masses as supposed to needing to calculate rigid body physics.
+      </p>
+
+      <p>
+        So we determined the kinetic energy by summing the linear velocity of each of the ends of the bone segments multiplied by their masses.  Then determined the potential energy based simply on the pull experienced by the springs at the bottom of the finger based on how each of the joints were rotated, which simply had an affect on the displacement based on the radius of the pulleys the strings were strong around.  The Lagrangian method allowed us not to worry about specific locations of string segments in x and y, and manually calculating how long the string is, nor needing to calculate the forces on the pulleys based on the orientations of the strings entering and leaving them.  These were all complex geometric calculations that were prone to errors and took lots of time to debug.  The Lagrangian method implementation was not without it’s debugging process, but it was smooth and all the pieces and equations were much more understandable.
+      </p>
+
+      <p>
+        To close, once we had defined the kinetic and potential energy, we simply defined the Lagrangian (L) to be the potential energy (V) subtracted from the kinetic energy (T) (L = T - V).  We then used the Euler-Lagrange Formulas shown in Figure 4 to determine equations of motion for the entire system.
+      </p>
+
+      <p>
+        From this setup we achieved an extremely parameterizable simulation with lots of information about the system.  We could tweak and tune the joint lengths, spring constants, pulley radii, string orientation, friction constants, masses, spring displacement (motor actuation).  With a little more effort additional joints could even be added to the finger.  This allowed for us to be able to simulate any system remotely like the original in the paper we gained inspiration from.  Additionally, Plotting information like tension force of the string is a much easier task in this system than we originally had set up.
+
+      </p>
+
+      <p><b>Conclusion</b></br>
+        Simulation is a really important and informative part of the iterative and prototyping process.  Using it we have been able to gain insight into how our finger system works and make design decisions about the finger.
+      </p>
+
+    </div>
+  </div>
+  <hr>
+</div>
+<!-- END BLOG ENTRIES -->
+
+
+
+
+<!-- BEGIN PICTURES -->
+<div class="w3-col l4">
+
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/arm1.jpg" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">The robotic hand and wrist</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/sim1.jpg" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Example of a Simple Interactive Simulation</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/finger12.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Diagram of the Tendon based finger system with finger visuals showing the parallels in the motion</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/sim3.jpg" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Newtonian modelling of our complex system.</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/sim4.jpg" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">The Euler-Lagrange Equation (Note: We also included a friction term)</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+
+
+
+ </div>
+<!-- END PICTURES -->
+
+
+ <!-- Labels / tags -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4><b>Tags</b></h4>
+    </div>
+    <div align=center class="w3-container w3-white">
+      <p><p></p>
+        
+        <span class="w3-tag w3-light-grey w3-margin-bottom"><a style="text-decoration:none;" href="../tagSoft.html">Software</a></span>
+       
+      </p>
+    </div>
+  </div>
+
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="copyright">
+      <a a style="text-decoration:none;"  href="https://github.com/prava-d/RoboticArm">
+        <i class="fa fa-github-square fa-5x"></i>
+      </a>
+      <p></p>
+      <p>Ava Lakmazaheri, Benjamin Ziemann, Prava Dhulipalla, Samantha Eppinger, William Derksen</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/skel.min.js"></script>
+  <script src="../assets/js/util.js"></script>
+  <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+  <script src="../assets/js/main.js"></script>
+  <script>
+
+  //Navbar
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+  }
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+
+</body>
+</html>

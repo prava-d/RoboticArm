@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<!--
+  Typify by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+
+<html>
+  <head>
+    <title>Tenacity - Blog</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  </head>
+
+
+<!-- START NAV BAR -->
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+</style>
+<body class="w3-light-grey">
+
+
+
+
+
+<!-- Content of nav bar -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="../index.html">Home</a>
+  <a href="../about.html">About</a>
+  <a href="../mechanical.html">Mechanical</a>
+  <a href="../electrical.html">Electrical</a>
+  <a href="../software.html">Software</a>
+  <a href="../team.html">Team</a>
+  <a href="../blog.html">Blog</a>
+  <a href="../gallery.html">Gallery</a>
+
+</div>
+
+
+<!-- Box around nav bar-->
+<span style="font-size:25px;cursor:pointer;float:right;color:white;font-weight:bold;background-color: rgba(128, 0, 0, 0.6);
+      text-shadow: 2px 2px #000000;
+      box-shadow:         inset 0 0 25px #000000;
+
+      /*border-style: double solid;
+      border-width: 4px 1px;*/
+      line-height: .01em;
+      /*margin: 0 auto .01em;*/
+      padding: .75em;
+      width: 10%;" onclick="openNav()">&#9776; Menu</span>
+<!-- END NAV BAR -->
+
+<body>
+
+
+
+  <!-- Banner -->
+  <a style="text-decoration:none;" href="../index.html">
+      <section id="banner" style="background: url(../images/blogheader.jpg);background-repeat: no-repeat; background-position: center top; background-size: cover">
+      <h2><strong>Tenacity - Blog<br><h4>Robotic Gripper</br>Team DeGra - PoE 2017</h4></strong></h2>
+      </section>
+  </a>
+
+  <!-- Minimized width -->
+  <div class="w3-content" style="max-width:1400px">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container">
+      <h4><b>Computer Vision</b></h3>
+      <h5>Prava Dhulipalla :: <span class="w3-opacity">November 25, 2017</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>
+        If our robotic arm is to take over the world, then we have to give it eyes.
+      </p>
+
+      <p>
+        But somebody, I won’t call them out, but somebody didn’t want to donate their eyes because they needed it to “CAD the robotic hand” and “look at Pittsburgh memes.” Like okay, drama queen, I guess we’ll have to pivot.
+      </p>
+
+      <p>
+        However, thankfully the answer is already there - computer vision. The actually very well-documented field of robotics that nobody on my PoE has ever even heard of! Okay well actually Ben and Ava are pretty good at Computer Vision so that’s a lie but lemme feel good about myself.
+      </p>
+
+      <p>
+        Anyways, our answer is computer vision! Using video input could expand the things we could do with the robotic arm and potentially allow for more further progress on our stretch goals rather than just start-stop actuation.
+      </p>
+
+
+      <p>
+        However, if you’ve met me before, it wouldn’t do if the task was super easy (it actually is pretty easy, I’m just kind of slow and insistent on understanding when it is clear that maybe I don’t have to learn everything about OpenCV). So, I decided to code in C++. One, because apparently it is better at real-time video processing (however, Python OpenCV calls C++ functions, so maybe if we just stick to the functions given to us, it would be okay - but only using the functions of OpenCV limits us, and sometimes we need to put our own code in there or combine functions or whatever). Two, because I said I wanted to do it and the rest of the team is nice enough to let me do my own thing.
+      </p>
+
+      <p>
+        So - I downloaded OpenCV for C++ and started coding. I even started to use Eclipse! But that was not the best idea - manually importing libraries in order to code is very arduous. So I pivoted away from an IDE towards just using Sublime, which was a bit disappointing but meant I could use my favorite Sublime theme!
+      </p>
+
+      <p>
+        I have many “OpenCV exploration files,” which was just me checking out the various functions of OpenCV. But then it was time to get serious. First, I created a color detection script that interfaced with the Arduino. It would send a start flag if it detected green and a stop flag if it detected red. This was kind of a weird step before object detection, but it made sense at the time. And it worked! And I learned CV! Life was good.
+      </p>
+
+      <p>
+       Now, object detection. The first algorithm I tried was background subtraction. This way, any objections in the forefront would show, and I could simply draw a box around that object. For whatever reason, the first time I tried to implement it failed. So then I moved away from that.
+      </p>
+
+      <p>
+        The second thing way I tried to implement object detection was through edge detection. Now there is a cool guy named Haars . . . I think. Anyway there is an edge detection algorithm called the Haars Cascade algorithm, which I also tried to use. It worked okay - that algorithm is mainly used for feature detection and facial recognition. So, it wasn’t great at determining an object in the forefront, like we had wanted (but excellent at determining every single edge, which we could then extrapolate into many objects).
+      </p>
+
+      <p>
+        Then I pivoted back and tried to do background subtraction, and . . . it worked? I mean I was older by like a week or two, so I guess I must have been wiser . . . anyways, it worked. So then I added some code to draw boxes around the largest object. It works alright - not as well as I hope, but okay enough where it serves as a pretty good starting point. I’m a little hesitant to iterate further because it’s better to test with the mounted camera rather than relying on the webcam - different issues can arise.
+      </p>
+
+      <p>
+        But yeah! That was my journey for computer vision! Also I must point at the fact that even though I’m talking about a topic that could use mainly images to showcase my work, I included the most useless images . . . but I guess this means I’m forced to write another blog post!
+      </p>      
+
+    </div>
+  </div>
+  <hr>
+</div>
+<!-- END BLOG ENTRIES -->
+
+
+
+
+<!-- BEGIN PICTURES -->
+<div class="w3-col l4">
+
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/eye.jpg" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">
+These are eyes! I know Oliners sometimes forget about them because we use IR or distance sensors instead, but yeah they are great 👌👌 part of the human anatomy</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/hotdog.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">It’s called Hot Dog Stand</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+
+
+
+ </div>
+<!-- END PICTURES -->
+
+
+ <!-- Labels / tags -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4><b>Tags</b></h4>
+    </div>
+    <div align=center class="w3-container w3-white">
+      <p><p></p>
+      
+        <span class="w3-tag w3-light-grey w3-margin-bottom"><a style="text-decoration:none;" href="../tagSoft.html">Software</a></span>
+
+      </p>
+    </div>
+  </div>
+
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="copyright">
+      <a a style="text-decoration:none;"  href="https://github.com/prava-d/RoboticArm">
+        <i class="fa fa-github-square fa-5x"></i>
+      </a>
+      <p></p>
+      <p>Ava Lakmazaheri, Benjamin Ziemann, Prava Dhulipalla, Samantha Eppinger, William Derksen</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/skel.min.js"></script>
+  <script src="../assets/js/util.js"></script>
+  <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+  <script src="../assets/js/main.js"></script>
+  <script>
+
+  //Navbar
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+  }
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+
+</body>
+</html>

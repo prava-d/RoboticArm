@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<!--
+  Typify by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+
+<html>
+  <head>
+    <title>Tenacity - Blog</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  </head>
+
+
+<!-- START NAV BAR -->
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+</style>
+<body class="w3-light-grey">
+
+
+
+
+
+<!-- Content of nav bar -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="../index.html">Home</a>
+  <a href="../about.html">About</a>
+  <a href="../mechanical.html">Mechanical</a>
+  <a href="../electrical.html">Electrical</a>
+  <a href="../software.html">Software</a>
+  <a href="../team.html">Team</a>
+  <a href="../blog.html">Blog</a>
+  <a href="../gallery.html">Gallery</a>
+
+</div>
+
+
+<!-- Box around nav bar-->
+<span style="font-size:25px;cursor:pointer;float:right;color:white;font-weight:bold;background-color: rgba(128, 0, 0, 0.6);
+      text-shadow: 2px 2px #000000;
+      box-shadow:         inset 0 0 25px #000000;
+
+      /*border-style: double solid;
+      border-width: 4px 1px;*/
+      line-height: .01em;
+      /*margin: 0 auto .01em;*/
+      padding: .75em;
+      width: 10%;" onclick="openNav()">&#9776; Menu</span>
+<!-- END NAV BAR -->
+
+<body>
+
+
+
+  <!-- Banner -->
+  <a style="text-decoration:none;" href="../index.html">
+      <section id="banner" style="background: url(../images/blogheader.jpg);background-repeat: no-repeat; background-position: center top; background-size: cover">
+      <h2><strong>Tenacity - Blog<br><h4>Robotic Gripper</br>Team DeGra - PoE 2017</h4></strong></h2>
+      </section>
+  </a>
+
+  <!-- Minimized width -->
+  <div class="w3-content" style="max-width:1400px">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container">
+      <h3><b>Comically Large</b></h3>
+      <h5>Ava Lakmazaheri :: <span class="w3-opacity">November 30, 2017</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>Happy Thanksgiving! This break, I have taken the opportunity to design our vision of a humanistic palm.</p>
+
+        <p>Anthropomorphism was a theme of our overarching goals, and we have yet to make the push from a few fingers that work independently to a full system that is human-like. Thus, our new silhouette will mirror that of the human hand, with four fingers attached along the palm length and a thumb angled off to the side. With this revamp, we can also accommodate a delta from the end of the last sprint and move towards yet another project goal: the need to gear up our servos for finger strength.
+</p>
+
+        <p>Needless to say, anthropomorphic inspiration provided us with a lot of design constraints. A major roadblock was sizing; the servos and necessary attachments take a significant amount of space, but we wanted all of this to be hidden and only the (reasonably spaced) fingers to show from the outside. Balancing room for the servos and gearboxes, retaining functionality, and meeting human like proportions were all major trade offs!
+</p>
+
+        <p>To facilitate in this design, the servos were reoriented and staggered down the length of the hand. Our idea was to use a chain/belt system that transfers the servo rotation from the base of the hand up to the fingers. Here is a sample of what one finger’s transmission looked like.
+
+</p>
+
+        <p>When we put five of these fingers next to each other, and cover up all of the system’s inner workings, it begins to look human like (albeit either a human with talons or very sharp nails)!
+</p>
+
+        <p>We are back on campus and jumping into the fabrication of our new hand! This entails a whole lot of 3D printing and laser cutting (and waiting for both machines to not be in use by other eager students).
+</p>
+
+        <p>Our result is, well, comically large. It is ironic that after all our anthropomorphic considerations, we ended up with a hand so gargantuan. Turns out accounting for human ratios does not prevent the entire hand from getting very, very big. </p>
+
+        <p>This was the size needed to house our new transmission system. Unfortunately - and importantly - this ended up inhibiting the range of the fingers themselves. With a palm so offset from the finger base, their full range of motion barely swept off of the palm enough to grab an object.
+</p>
+
+        <p>To further unsettle us about the potential of this design, materials that we ordered for it got delayed in delivery. So, we were testing our entire system out of volatile prototyping materials such as acrylic gears, 3D printed pulleys, and rubber band/string chains. All in all, this did not lead to a solid performance from the humanistic hand.
+</p>
+
+        <p>While the materials would eventually come in, our early lack of success caused us to scrap this idea. We had little confidence in the difference our purchased materials would make, did not want our entire system to be comically large, and prioritized the functionality of gripping objects over the aesthetics of a humanistic palm.
+</p>
+
+<p>Thus, we were back to square one with the palm design. After pouring ourselves into the CAD and fabrication for the past couple of weeks, this is by no means the best feeling. However, this is all a learning experience - and we certainly learned important lessons about design as well as the mechanical pitfalls of our system!
+</p>
+      
+
+    </div>
+  </div>
+  <hr>
+</div>
+<!-- END BLOG ENTRIES -->
+
+
+
+
+<!-- BEGIN PICTURES -->
+<div class="w3-col l4">
+
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/comic1.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">The finger</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+   <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/comic2.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">The hand</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+   <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/comic3.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Assembly</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+
+
+
+ </div>
+<!-- END PICTURES -->
+
+
+ <!-- Labels / tags -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4><b>Tags</b></h4>
+    </div>
+    <div align=center class="w3-container w3-white">
+      <p><p></p>
+        <span class="w3-tag w3-light-grey w3-margin-bottom"><a style="text-decoration:none;" href="../tagMech.html">Mechanical</a></span>
+        <span class="w3-tag w3-light-grey w3-margin-bottom"><a style="text-decoration:none;" href="../tagIntg.html">Integration</a></span>
+     
+      </p>
+    </div>
+  </div>
+
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="copyright">
+      <a a style="text-decoration:none;"  href="https://github.com/prava-d/RoboticArm">
+        <i class="fa fa-github-square fa-5x"></i>
+      </a>
+      <p></p>
+      <p>Ava Lakmazaheri, Benjamin Ziemann, Prava Dhulipalla, Samantha Eppinger, William Derksen</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/skel.min.js"></script>
+  <script src="../assets/js/util.js"></script>
+  <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+  <script src="../assets/js/main.js"></script>
+  <script>
+
+  //Navbar
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+  }
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+
+</body>
+</html>

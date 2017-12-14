@@ -1,14 +1,28 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+  Typify by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+
 <html>
-<title>Tenacity - Team</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <head>
+    <title>Tenacity</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  </head>
+
 
 <!-- START NAV BAR -->
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
 
 
 .sidenav {
@@ -57,60 +71,115 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
 
 
-<!-- w3-content defines a container for fixed size centered content, 
-and is wrapped around the whole page content, except for the footer in this example -->
+<!-- Content of nav bar -->
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
   <a href="about.html">About</a>
   <a href="mechanical.html">Mechanical</a>
   <a href="electrical.html">Electrical</a>
   <a href="software.html">Software</a>
   <a href="team.html">Team</a>
   <a href="blog.html">Blog</a>
-  <a href="gallery.html">Gallery</a>
+  <a href="http://www.google.com">Gallery</a>
 
 </div>
 
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+<!-- Box around nav bar-->
+<span style="font-size:25px;cursor:pointer;float:right;color:white;font-weight:bold;background-color: rgba(128, 0, 0, 0.6);
+      text-shadow: 2px 2px #000000;
+      box-shadow:         inset 0 0 25px #000000;
+
+      /*border-style: double solid;
+      border-width: 4px 1px;*/
+      line-height: .01em;
+      /*margin: 0 auto .01em;*/
+      padding: .75em;
+      width: 10%;" onclick="openNav()">&#9776; Menu</span>
 <!-- END NAV BAR -->
 
+<body>
 
 
 
-<div class="w3-content" style="max-width:1400px">
+  <!-- Banner -->
+  <a style="text-decoration:none;" href="index.html">
+      <section id="banner" style="background: url(images/finger6.png);background-repeat: no-repeat; background-position: center top;background-size: cover;">
+      <h2><strong>Tenacity<br><h4>Robotic Gripper</br>Team DeGra - PoE 2017</h4></strong></h2>
+      </section>
+  </a>
+
+  <!-- Minimized width -->
+  <div class="w3-content" style="max-width:1400px">
+  </br>
+     <p align="center"><img src="images/team1.jpg" height=50% width=50%></p></br>
+    <h1 style = "text-align: center"><b>Our Team!</b></h1></br>
+
+    <div style="height: 100px;">
+    <h3>Ava Lakmazaheri</h3>
+    <p>Sam has a vision</p>
+    </div>
+
+    <div style="height: 100px;">
+    <h3>Benjamin Ziemann</h3>
+    <p>Sam has a vision</p>
+    </div>
+
+    <div style="height: 100px;">
+    <h3>Prava Dhulipalla</h3>
+    <p>Sam has a vision</p>
+    </div>
+
+    <div style="height: 100px;">
+    <h3>Samantha Eppinger</h3>
+    <p>Sam has a vision</p>
+    </div>
+
+    <div style="height: 100px;">
+    <h3>william Derksen</h3>
+    <p>Sam has a vision</p>
+    </div>
+
+    <h2 style = "text-align: center">Who We Are</h2></br>
+    <h3 style="text-transform: none;"><p  align="center">At the beginning of the semester, our Principles of Engineering professors told us we would be digging our own graves, and that we should choose upfront if we wanted them to be deep or shallow. Well, in addition to the obvious team formation based on stunning good looks, we all got paired on wanting to reside dead in a deep grave. Thus, De(ep)Gra(ve) was formed.</br></br>
+
+They say team bonding? We say Times Square! After putting the finishing touches on our PoE project during the first week of class, we treated ourselves to an excursion to New York City. Ignore all the other people in the photo, we just lost the Olin Challenge and found them in NYC.
+</p> </h3>
+  
+  
+    <p align="center"><img src="images/stair.jpg" height=66% width=66%></p></br>
+  </div>
 
 
-<!-- Header -->
-<header class="w3-container w3-center w3-padding-32"> 
-  <h1><b>tenacity</b></h1>
-  <p>our vision of a robotic gripper
 
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="copyright">
+      <a a style="text-decoration:none;"  href="https://github.com/prava-d/RoboticArm">
+        <i class="fa fa-github-square fa-5x"></i>
+      </a>
+      <p></p>
+      <p>Ava Lakmazaheri, Benjamin Ziemann, Prava Dhulipalla, Samantha Eppinger, William Derksen</p>
+    </div>
+  </footer>
 
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/skel.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+  <script src="assets/js/main.js"></script>
+  <script>
 
-
-
-<!-- END w3-content -->
-</div>
-
-<!-- Footer, currently a nice grey bar, to have github link -->
-<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
-</footer>
-
-
-
-<!-- Javascript -->
-<script>
-
-//Navbar
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-}
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
-
-//Next javascript element
-</script>
+  //Navbar
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+  }
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
 
 </body>
 </html>

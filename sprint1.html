@@ -11,7 +11,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
       <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -74,14 +74,14 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <!-- Content of nav bar -->
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="../index.html">Home</a>
-  <a href="../about.html">About</a>
-  <a href="../mechanical.html">Mechanical</a>
-  <a href="../electrical.html">Electrical</a>
-  <a href="../software.html">Software</a>
-  <a href="../team.html">Team</a>
-  <a href="../blog.html">Blog</a>
-  <a href="../gallery.html">Gallery</a>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="mechanical.html">Mechanical</a>
+  <a href="electrical.html">Electrical</a>
+  <a href="software.html">Software</a>
+  <a href="team.html">Team</a>
+  <a href="blog.html">Blog</a>
+  <a href="gallery.html">Gallery</a>
 
 </div>
 
@@ -104,9 +104,9 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
 
   <!-- Banner -->
-  <a style="text-decoration:none;" href="../index.html">
-      <section id="banner" style="background: url(../images/blogheader.jpg);background-repeat: no-repeat; background-position: center top; background-size: cover">
-        <h2><strong>Process - Sprint 1<br><h4>Tenacity</h4></strong></h2>
+  <a style="text-decoration:none;" href="index.html">
+      <section id="banner" style="background: url(images/blogheader.jpg);background-repeat: no-repeat; background-position: center top; background-size: cover">
+     <h2><strong>Process - Sprint 1<br><h4>Tenacity</h4></strong></h2>
       </section>
   </a>
 
@@ -118,18 +118,25 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <!-- Blog entry -->
   <div class="w3-card-4 w3-margin w3-white">
     <div class="w3-container">
-      <h3><b>A Slap on the Wrist</b></h3>
-      <h5>Benjamin Ziemann :: <span class="w3-opacity">December 10, 2017</span></h5>
+      <h3><b>Sprint 1</b></h3>
+      
     </div>
 
     <div class="w3-container">
-      <p>Something we talked about early on was building out a full, actuated arm. With three days left, that wasn't going to happen though. We did however still to ascertain whether or not the hand had a grip on something.</p>
-
-      <p>Enter the base / wrist mechanism.</p>
-
-      <p>Powered by a linear actuator (Thanks Ava!), this allows for the arm to move vertically. As it does so the camera tracks the object to ensure it is not slipping out of the grip. If it does detect it slipping, the grip is tightened.</p>
-
-      <p>This setup also allowed us to much more easily store and wire the electronics in the cabvity now beneath the arm. Because of the slotting of the forearm, it was easy to drop wires down through it to the electronics hub. The side wings provided easy cover and allowed us to add aesthetic.</p>
+     <p>Sprint 1, we feel, was overwhelmingly a success. At the end of this sprint, we had felt on top of the world and like our vision was really coming together. We were initially worried about our team dynamic as a ‘friend’ group, but this sprint really proved that we could work well together and get something accomplished. Note that this comment is not meant to be a foreshadowing comment - our team dynamic did manage to stay healthy, but individually our work habits became less and less conducive to our personal health.
+</p>
+      <p>This sprint served as the beginning of this whole adventure! We met our teammates, immediately began to brainstorm projects, decided on team goals, our SCRUM process, and personal goals. We also were able to lay out a flexible schedule with important deadlines for the rest of the project.
+</p>
+      <p>Though we had decided on a robotic arm, we had to actually layout subsystem tasks. This proved to be a difficult endeavor - the way we scoped out our project meant that the mechanical subteam had a lot to do initially, and that software should come later. Looking back at this now, we realize that this meant that our scoping of the project in terms of subsystems should have changed at this point. Although it’s nice that we decided so early, not changing the way we scoped our subsystems as a team when we realized that not much had to be done otherwise became problematic later.
+</p>
+      <p>We also decided some team process things, namely meeting times and dedication to the project. The name “DeGra” came from here - we felt our motivation would reach “De(ep) Gra(ve)” status. We also decided on Saturday 9 AM working meetings, with check-in meetings every Monday night at 7 PM, and Team Health meetings every Wednesday night at 7 PM. We did not talk about team bonding - this would have been the sprint to do team bonding, but unfortunately we dropped the ball on that.
+</p>
+      <p>Mechanically, we set out on the ambitious goal of creating three separate types of mechanical fingers to develop a better understanding of what we were getting ourselves into. We wanted one of them to be a rigid interesting mechanical design, one to be soft robotics design, and one to be partially rigid and partially compliant. We unfortunately weren’t able to create the soft robotic finger; we decided to prioritize our partially compliant fingers due to the early success we saw with them.</p>
+      <p>We were able to create an arm for a claw like hand that used the partially compliant fingers. Our electrical/integration team worked hard to integrate linear actuators into the arm, which was how we curled the fingers. They also integrated touch sensors and IR sensors which allowed us to autonomously pick up objects and know when to stop picking them up. The software team wrote control code for linear actuators, and code that takes IR and touch sensor input and changes output.</p>
+      <p>We worked really effectively, and as a result got a really good end product with three fingers and a palm/arm to mount them on. They were fairly reliable in terms of gripping. In terms of gripping effectively to keep an object picked up - it was more variable. However, it could easily pick up light and large objects. This was due to an iterative process of building on the mechanical system. Software and electrical happened very late in the game, and it’s a wonder we were able to get the robotic arm effectively actuated even though we couldn’t even integrate until Thursday night. Our actual Sprint 1 presentation  for the Sprint review was done pretty early on and was well communicated. This was reflected in our Sprint feedback, which was fairly positive about the outcome of our project, and only included minimal deltas about going forward with our project. Yay success! But celebrating this early was something we did too soon . . .
+</p>
+<p>Click <a href ="https://docs.google.com/presentation/d/1zikGZeGMWouV2yKZeL0ItdOSzsqIEsnaqG5chTatx6U/edit?usp=sharing">here</a> to see the slides from our Sprint 1 Design Review:
+</p>
 
         
 
@@ -150,34 +157,83 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <div class="w3-card w3-margin w3-margin-top">
     <!-- REPLACE THIS PATH WITH PICTURE PATH -->
     <!-- PLAY WITH SCALE AS NEEDED -->
-  <img src="../images/basecad.png" style="width:100%">
+  <img src="images/s11.jpg" style="width:100%">
     <div class="w3-container w3-white"><p></p>
-      <p align="center">CAD of the base</p>
+      <p align="center">Team Goals we created for ourselves during the first meeting
+</p>
     </div>
   </div><hr>
   <!-- COPY ABOE THIS FOR A NEW PICTURE -->
 
-   <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
   <div class="w3-card w3-margin w3-margin-top">
     <!-- REPLACE THIS PATH WITH PICTURE PATH -->
     <!-- PLAY WITH SCALE AS NEEDED -->
-  <img src="../images/comic2.png" style="width:100%">
+  <img src="images/s12.jpg" style="width:100%">
     <div class="w3-container w3-white"><p></p>
-      <p align="center">The full assembly CADED</p>
+      <p align="center">Brainstorming session for our project
+</p>
     </div>
   </div><hr>
   <!-- COPY ABOE THIS FOR A NEW PICTURE -->
 
-   <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
   <div class="w3-card w3-margin w3-margin-top">
     <!-- REPLACE THIS PATH WITH PICTURE PATH -->
     <!-- PLAY WITH SCALE AS NEEDED -->
-  <img src="../images/assem.JPG" style="width:100%">
+  <img src="images/s13.jpg" style="width:100%">
     <div class="w3-container w3-white"><p></p>
-      <p align="center">Final assembly</p>
+      <p align="center">First iteration of our schedule for the project.</p>
     </div>
   </div><hr>
   <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="images/s14.jpg" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Brainstorming for the partially compliant finger</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="images/s15.PNG" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">CAD for the rigid fingers
+</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="images/s16.jpg" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Partially compliant fingers connected to a touch sensor and linear actuator.</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="images/s17.jpg" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Team members working on integration.</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+
 
 
 
@@ -189,12 +245,11 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
  <!-- Labels / tags -->
   <div class="w3-card w3-margin">
     <div class="w3-container w3-padding">
-      <h4><b>Tags</b></h4>
+    
     </div>
     <div align=center class="w3-container w3-white">
       <p><p></p>
-        <span class="w3-tag w3-light-grey w3-margin-bottom"><a style="text-decoration:none;" href="../tagMech.html">Mechanical</a></span>
-        <span class="w3-tag w3-light-grey w3-margin-bottom"><a style="text-decoration:none;" href="../tagIntg.html">Integration</a></span>
+        
      
       </p>
     </div>
@@ -219,11 +274,11 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   </footer>
 
   <!-- Scripts -->
-  <script src="../assets/js/jquery.min.js"></script>
-  <script src="../assets/js/skel.min.js"></script>
-  <script src="../assets/js/util.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/skel.min.js"></script>
+  <script src="assets/js/util.js"></script>
   <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-  <script src="../assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
   <script>
 
   //Navbar

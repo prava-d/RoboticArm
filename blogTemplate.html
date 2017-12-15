@@ -1,0 +1,193 @@
+<!--
+TODO List to make a blog post:
+Update tab name (title tag on ~line 13)
+Fill out header with title, subtitle, date (~line 90)
+Load any pictures you want and caption them (~line 120)
+Save said pictures to the media/images directory in this repo
+Remove any tags not related to the blog post (~line 145)
+-->
+
+
+<!DOCTYPE html>
+<html>
+<title>Tenacity</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+<!-- START NAV BAR -->
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+</style>
+<body class="w3-light-grey">
+
+
+
+
+
+<!-- w3-content defines a container for fixed size centered content,
+and is wrapped around the whole page content, except for the footer in this example -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="about.html">About</a>
+  <a href="mechanical.html">Mechanical</a>
+  <a href="electrical.html">Electrical</a>
+  <a href="software.html">Software</a>
+  <a href="team.html">Team</a>
+  <a href="blog.html">Blog</a>
+  <a href="gallery.html">Gallery</a>
+
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+<!-- END NAV BAR -->
+
+
+
+
+<div class="w3-content" style="max-width:1400px">
+
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32">
+  <h1><b>tenacity</b></h1>
+  <p>our vision of a robotic gripper
+
+
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container">
+      <h4><b>POST TITLE HERE</b></h3>
+      <h5>SUBTITLE HERE :: <span class="w3-opacity">DATE HERE (MONTH DATE, YEAR)</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>FILL THIS OUT WITH YOUR WORDS</p>
+    </div>
+  </div>
+  <hr>
+</div>
+<!-- END BLOG ENTRIES -->
+
+
+
+
+<!-- BEGIN PICTURES -->
+<div class="w3-col l4">
+
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+  	<!-- REPLACE THIS PATH WITH PICTURE PATH -->
+  	<!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="media/images/test.jpg" style="width:100%">
+    <div class="w3-container w3-white">
+      <p>THIS IS A CAPTION</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOVE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+  	<!-- REPLACE THIS PATH WITH PICTURE PATH -->
+  <img src="media/images/test.jpg" style="width:100%">
+    <div class="w3-container w3-white">
+      <p>THIS IS A CAPTION PART 2</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOVE THIS FOR A NEW PICTURE -->
+
+
+ </div>
+<!-- END PICTURES -->
+
+
+  <!-- Labels / tags -->
+  <!-- REMOVE THE TAGS THAT DO NOT APPLY TO THE POST -->
+
+    <div class="w3-container w3-padding">
+      <h4>Tags</h4>
+    </div>
+    <div class="w3-container w3-white">
+    <p>
+      <span class="w3-tag w3-light-grey w3-margin-bottom"><a href="about.html">Mechanical</a></span>
+      <span class="w3-tag w3-light-grey w3-margin-bottom"><a href="about.html">Electrical</a></span>
+      <span class="w3-tag w3-light-grey w3-margin-bottom"><a href="about.html">Software</a></span>
+      <span class="w3-tag w3-light-grey w3-margin-bottom"><a href="about.html">Integration</a></span>
+      <span class="w3-tag w3-light-grey w3-margin-bottom"><a href="about.html">Research</a></span>
+      <span class="w3-tag w3-light-grey w3-margin-bottom"><a href="about.html">Team</a></span>
+    </p>
+    </div>
+
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer, currently a nice grey bar, to have github link -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+</footer>
+
+
+
+<!-- Javascript -->
+<script>
+
+//Navbar
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+//Next javascript element
+</script>
+
+</body>
+</html>

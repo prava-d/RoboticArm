@@ -1,17 +1,22 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<!--
+  Typify by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+
 <html>
   <head>
-    <title>Tenacity - Software</title>
+    <title>Tenacity - Sprint 3</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link href="assets/css/lightbox.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css" />
       <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  </head>
 
 
 <!-- START NAV BAR -->
@@ -60,28 +65,28 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 }
 
 </style>
-</head>
 <body class="w3-light-grey">
 
 
 
 
 
-<!-- w3-content defines a container for fixed size centered content,
-and is wrapped around the whole page content, except for the footer in this example -->
+<!-- Content of nav bar -->
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="mechanical.html">Mechanical</a>
-  <a href="electrical.html">Electrical</a>
-  <a href="software.html">Software</a>
-  <a href="team.html">Team</a>
-  <a href="blog.html">Blog</a>
-  <a href="gallery.html">Gallery</a>
+  <a href="../index.html">Home</a>
+  <a href="../about.html">About</a>
+  <a href="../mechanical.html">Mechanical</a>
+  <a href="../electrical.html">Electrical</a>
+  <a href="../software.html">Software</a>
+  <a href="../team.html">Team</a>
+  <a href="../blog.html">Blog</a>
+  <a href="../gallery.html">Gallery</a>
 
 </div>
 
+
+<!-- Box around nav bar-->
 <span style="font-size:25px;cursor:pointer;float:right;color:white;font-weight:bold;background-color: rgba(128, 0, 0, 0.6);
       text-shadow: 2px 2px #000000;
       box-shadow:         inset 0 0 25px #000000;
@@ -94,98 +99,160 @@ and is wrapped around the whole page content, except for the footer in this exam
       width: 10%;" onclick="openNav()">&#9776; Menu</span>
 <!-- END NAV BAR -->
 
-
-<!-- Banner -->
-<a style="text-decoration:none;" href="index.html">
-    <section id="banner" style="background: url(images/softwarebanner.jpg);background-repeat: no-repeat; background-position: center top; background-size: cover;">
-    <h2><strong>Software Subsystem<br><h4>Tenacity</h4></strong></h2>
-    </section>
-</a>
+<body>
 
 
-<!-- Header -->
-<div class="w3-content" style="max-width:1000px">
-  </br><h3>
-  <p align="center" style="text-transform: none">Welcome to the software subteam!</br>All our code can be found on our <a style="color: blue" href = "https://github.com/prava-d/RoboticArm">GitHub</a></br>The main components of software was as follows:</p>
-  </h3><h2>Control Code</h2>
-  <p>In order to fulfill our task of gripping an object, control code had to be written. We used a microcontroller (the Arduino Uno R3) in order to power our motors and various other components, and also receive sensory input on the various sensors we integrated into the system. </p>
-  <p>Across all of our sprints, this control code had basically the same structure. We have servos connected to each of the fingers, so we code the servos to start upright and reach it’s maximum gripping capacity. In order to first start gripping, we use an IR sensor in order to detect whether an object has been placed in the palm. The code sets an IR sensor threshold (determined by placing an object as close to the sensor at the point we want to start sensing), and if the threshold has been met, that means that there is an object. At this point, it starts gripping.</p>
-  <p>However, when does it stop gripping? There are touch sensors in the fingers for this very purpose. We also set a threshold for the touch sensor (set by determining what value matched up with the max force we wanted to exert - and this max force, to us, signified a grip). When it reaches this value, it stops continually gripping and stays at the same position.</p>
-  <p>Actuating the servos was a little more difficult than actuating them all at once - we couldn’t do that because then the fingers would affect the other finger motion. As a result, we had to toggle the finger movement/ gripping motion.</p>
-  <p>Lastly, each finger, due to mechanical limitations with 3D printed fingers, each tolerance of the finger movement, in terms of motor movement, was slightly different. Thus, we had to adjust our PWM into the servos based on this, in order to have a more reliable overall system. </p>
-  <h2>Mechanical Simulations</h2>
-  <p>In order to better understand and visualize the movement of our mechanical system, we created physics simulations for a select number of the “pulley fingers” designs we had ideated. These simulations were constructed in MATLAB and Mathematica. They used physics derived from the various research papers we had read in order to create them.</p>
-  <p>Our reason for focusing on the simulations was that we realized that at best, we had a tentative grasp of the physics on our system. We were able to generally explain what was happening when each finger was gripping, which was okay, but iterating on the finger further in a way that was actually conducive to the outcome of the project required a more intensive knowledge behind the math behind the finger.</p>
-  <p>During our research-only sprint, therefore, we dedicated time into creating simulations. This ultimately helped understand where we would want to place holes for strings and how those tension in order to cause movement in the finger. Since our finger is essentially bioinspired by a human finger, our finger design relied exclusively on how our “tendons” (strings) affected the “digits” (each of the joint parts).</p>
-  <p>These simulations were ultimately used very minimally, in the sake of honesty, due to the lack of time the mechanical subteam had before iterating on the finger design. However, they still allow us to get a more comprehensive view into the mechanics of the system.</p>
-  <h2> Website </h2>
-  <p>After some point, it made sense for us to start looking at the website as a more concrete software deliverable. So, we made sure that we focused on the completion of that - especially after we explicitly warned that while working on the actual project is cool, the website is a large deliverable and deserves some time spent to it.</p>
-  <p>We started off with a simple website template and then moved onto edited it to fit our criteria and our vision. Although we originally thought this was an easy task, it turns out that website creation is a lot harder than it seems to be. Thus, it actually took a fair amount of time to create the website. However, this work paid off, and we got the website looking the way we wanted it to look.</p>
-  <p>Part of our website design included blog posts in order to better document our process. We felt that this was the best way to iteratively go through our progress through all the prints - so, we were able to write some blog posts as well (this wasn’t a software-only task, however).</p>
-  <p>The results of this Software deliverable can be seen on the very same website you are looking at right now!</p>
-  <h2> Computer Vision </h2>
-  <p>Computer Vision was much of an iterative process, but unfortunately a lot of the iteration was more ‘horizontal’ rather than vertical. This means that we made many changes to the scripts we used, but this was in the form to make another script that would serve the same process, but better. We could keep on recording until we found something that worked - whereas a more efficient ‘vertical’ process of iteration would have been to continuously build up on the same script until it works.</p>
-  <p>Our first script was essentially to stop and start the system based on a ‘flag’ - if a green flag appear, then it would start. If a red flag would appear, then it would stop. This was an attempt at building up to object tracking. </p>
-  <p>The good thing about starting with a ‘start-stop’ script in OpenCV is that it allowed us to use a lot of important CV libraries and techniques to help us really familiarize ourselves with OpenCV, especially OpenCV syntax in C++. It also helped to accustom the team with coding in C++, which all of us have done, but still needed some further development in terms of being completely intuitive.</p>
-  <p>The ‘start-stop’ actuation had three main function blocks: detecting red, detecting green, and a main class to pull everything together. In the detecting color blocks, we first converted the image into HSV, just to standardize the color detection. We used the cvtColor function for this. Then we made use of the inRange function, defining the HSV color ranges for the color we wanted to detect. This was fairly straightforward to detect green. However, detecting red was a little less straightforward - because its HSV ranges actually loops around.</p>
-  <p>In order to actually get a concrete boolean flag out of the image to signify whether it detected ‘enough’ red or ‘enough’ green, we used the binary image that inRange released, and counted up the number of white pixels within the binary image (the white represented the pixels within the color range we specified, and the black were the rest of the pixels). This proved to more difficult than was expected, mainly with the difficulty parsing through the pixels to get the color ranges (we had to do some casting to integers to get it to work, which initially we did not). We also was using the wrong range - we were using the HSV ranges to detect white, but the image was in actually in the BGR color scheme.</p>
-  <p>From here, it was as easy as using these functions we had created within the video, and sending out the flag based on camera input.</p>
-  <p>Our next script was object tracking. The final object tracking script used the pre-made object-tracking library within Open CV, and worked better than previous attempts. The actual code was very easy - using the Open CV library and making a pre-made box move around to the tracked object - but one of the reasons that this library was more preferable was that it actually had the capability to utilize multiple different algorithms, each with their strengths and pitfalls. For instance, some of them were really good at detecting failures, but had a reasonable delay when actually tracking the object. Others detected an object very well - even when the object was moved really quickly, but wouldn’t recognize when it was moved out of frame. To integrate the logic of tracking an object and detecting when it was off frame (so that the arm would move up or down in order to find it again, and also only grip when it was within range - this was utilized due to other difficulties, but it has this capability).
-  </p>
-  <h2> Interfacing with Serial </h2>
-  <p>One of the main pitfalls of our team was attempting to interface with Arduino Serial in order to have actual actuation based on object tracking. Although the software subteam was familiar with working with Pyserial and both sending and receiving values through Python, interfacing with Arduino via C++ was another beast to tackle entirely.</p>
-  <p>The first option we pursued was to interface with the arduino without any particular libraries.  Using built-in C++ libraries we were able to successfully and reliably talk from computer or raspberry pi to arduino.  We hadn’t looked into talking back to the computer, but we didn’t really need that for this project.  The problem with this approach was that it was not live.  The program worked by writing information to a file and then sending that file over the serial connection to the arduino.  This meant our sent information wasn’t tiny packets of bits at a time, instead there was a lot of overhead with the creation of a file and breaking that down into serial communication.  We determined this was too slow for our purposes.</p>
-  <p>Our second option we pursued was Boost, which was a way to communicate between Python and C++. If we got this working, then we could just use the same Pyserial that we were all familiar with to interface with Arduino.  This was pretty promising as our initial tests using this direction were quite fruitful.  Creating a class in C++ to generate messages to pass to python worked really well, and pyserial with said class functioned without a hitch.</p>
-  <p>The problem we encountered started when we actually started trying to implement computer vision with boost.  Opencv 2 wouldn’t play nicely with the boost module due to the classes it creates.  Specifically the “Mat” and “Vec3b” classes caused the boost module not to be able to compile.   After looking through numerous forums and stackoverflow posts, we discovered that part of the problem was that we needed to tell boost that it was compiling for opencv, and create class constructors to convert these Mats and Vec3bs into numpy arrays.  However, there wasn’t much good documentation for this.  We attempted but had a lot of trouble figuring out how to connect these pieces.  Finally we managed to get Mat to compile correctly, but couldn’t figure out Vec3b.  After a lot of painful debugging, we determined this method was a dead end at least for now, we needed a bit more experience with c++ in order to get this working correctly.</p>
-  <p>Our third option was a library called LibSerial.  This library is specifically geared for doing serial connection through c++.  Many people seem to use this as a solution to the problem, however the main site for the library appeared to be unfinished.  This did not inspire confidence.</p>
-  <p> We attempted to work this library by following the instructions on the site for installation, however when we got to using the “make” command in order to build and prepare the library for installation.  This didn’t work, due to needing to be built with the g++ -std=c++11 flag.  However, when changing the makefile in order to use this flag, it didn’t update the make command.  Needless to say, the whole process was tiresome.  Eventually we realized we could use sudo apt-get install to install the library and were relieved.  After running the installation we attempted to run some of the examples and walk through the tutorial, however the library didn’t seem to function correctly, and nothing we did seemed to get anything close to talking to the arduino.  The scripts inside of the library felt like they were missing constructors, so we came to the conclusion that the sudo apt-get method might have been outdated or something along those lines.</p>
-  <p> In the end, we didn’t manage to get anything useful working after a long and stressful exploration of multiple methods to talk to the arduino.</p>
 
-   <h2>Firmware</h2>
-  <p>We utilized two important pieces of firmware - the Arduino and the Raspberry Pi.</p>
-  <p>The Arduino was really important because a) it was required from the class, but also b) it was the easiest way to control the Servos and linear actuators we used to actuate our arm, but also it was the easiest way to receive sensory input from our system. And that’s how we used it! Our control code is written exclusively through Arduino, and can be found mentioned in our Software Subsystems (along with a link to our Github repository that has a plethora of code). We used the Arduino to power and ground the IR sensor and the touch sensors, as well as receive sensory data from them. We also powered and grounded the Servos and the linear actuators through the Arduino, and wrote values to them in order to get them to move. </p>
-  <p>The Raspberry Pi was also an integral device for our project.  The Raspberry Pi allowed us to disconnect our computers from the machine without losing any major functionality.  This was super important for making a standalone arm.  It helped to add to the professionalism and aesthetics of the project.  We kept the c++ computer vision code on the raspberry pi and used it to talk to our camera and arduino , allowing for more complex control of our system with image processing.  </p>
+  <!-- Banner -->
+  <a style="text-decoration:none;" href="../index.html">
+      <section id="banner" style="background: url(../images/blogheader.jpg);background-repeat: no-repeat; background-position: center top; background-size: cover">
+        <h2><strong>Process - Sprint 3<br><h4>Tenacity</h4></strong></h2>
+      </section>
+  </a>
+
+  <!-- Minimized width -->
+  <div class="w3-content" style="max-width:1400px">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container">
+      <h3><b>Sprint 3</b></h3>
+    </div>
+
+    <div class="w3-container">
+      <p>After the last sprint feeling a bit slow and not achieving the deliverable we were expecting at the end of it, this sprint we decided to go full force on creating a mechanical hand.  Unfortunately, while we gave it our best effort and really put our all into this sprint, numerous complications caused our design to fail in the end t our research to not fruitfully contribute to our hand design.  This was a real bummer, because in the last sprint we could justify to ourselves that we didn’t have a new and improved product due to the finger design research being the focus of the sprint, however this time we were putting significant work into making a whole hand, and we ended up not creating a design much different from the original.</p>
+
+      <p>The real downfall of Sprint 3 was our individual health at the end of it. None of us had been sleeping regularly for the four days coming into the Sprint 3 Review, and on the night of, we all had a cumulative total of five hours of sleep - to reiterate, if we added up the hours we slept right before the Sprint 3 Review, it would significantly less than the amount of sleep a single person should get a night, let alone five people. Also in this sprint, we learned that some of our friends were really confused by our team dynamic to the point where they thought we weren’t okay with each other. Things left unsaid? People so tired they have no filter? Who even knows...</p>
+
+      <p>Mechanically, three prototypes was made. The first one was modelled after the universal gripper, and utilized balloons filled with coffee grounds in order to prevent motors from stalling and have more surface area for gripping. Our tendon system was pretty good, making use of active and passive tendons.</p>
+
+      <p>We realized this wouldn’t work because in order to fix the Servos, the palm/arm needed to be large, which was not optimal for our purposes. So then, we pivoted to using the Festo fintails and a different hand design, for which the fingers were on the same plane as the actual palm.</p>
+
+      <p>It ended up being larger than anticipated, but this largeness made us realize that this was the only way the Servos would fit together. So this wouldn’t do.</p>
+      <p>Totally not last minute, we pivoted to something that worked: Sprint 1. We used to same design and modified it a bit, using the same fingers and pulley system to drive it. It was better!</p>
+      <p>In terms of electrical, we wired up the wires how we always did - with the IR and Touch Sensors. See our Electrical/Firmware page for info.</p>
+      <p>For software, we utilized object tracking algorithms in C++. We used a premade algorithm in the OpenCV library, called MIL. This algorithm was very effective at tracking the object, but less effective at determining when the object was gone. Here are three still from moving an object. Note the use of a blank background.</p>
+      <p>Also note that the color is very similar, but the object tracking algorithm is robust enough to find it! Yeah! It’s so great that what we spent three weeks on ended up being able to be written in a single day really easily . . . yep.</p>
+      <p>We also wrote control code, which didn’t change much logically. See our software subsystems for more information.</p>
+      <p>Anyways, Sprint 3 can be categorized by ineffective work habits. Yeah sure, software and mechanical ended up doing a lot of things, but a lot of things ended up not working - so we had to pivot down at the last minute. This Sprint proved one could be consistently working, but not effectively working. This can be proven by the fact that despite the very minimal amount of sleep we had gotten, we still weren’t able to give a very fleshed-out product. Also in this sprint, we realized we forgoed doing anything in terms of electrical incrementation.</p>
+      <p>We had done a small team retrospective for Sprint 2, but nothing fruitful ever came from it. At this point, we stopped doing effective teaming strategies, like communicating what we were doing (despite this being something we all said we would work on), when we were meaning, or being honest about how we actually felt about the way things were going in a healthy manner. In fact, the only thing that this Sprint was actually successful in was the fact that our website was poppin’ (formatting) and that content (like really great blog posts) was being uploaded to it. </p>
+      <p>This Sprint somewhat ruined our faith in ourselves. At least one member declared “I quit this team,” but more members thought about it. It was because of the same “effective work” idea - we had worked a lot, but not effectively, causing us to be burned out without even creating a product that we were all proud of.</p>
+
+
+
+
+    </div>
   </div>
-
-  <h2>Dependencies</h2>
-  <ul>
-  <li>Numpy</li>
-  <li>OpenCV</li>
-  <li>Arduino Standard Library</li>
-  <li>Boost</li>
-  <li>LibSerial</li>
-</ul>
+  <hr>
+</div>
+<!-- END BLOG ENTRIES -->
 
 
-<!-- END w3-content -->
+
+
+<!-- BEGIN PICTURES -->
+<div class="w3-col l4">
+
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="images/Mechanical1.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">He’s a little chunky!</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+   <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="images/Mechanical2.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">CAD vs real life</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+   <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="images/Mechanical3.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Look at how happy we are . . . happy . . . yes.</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+ <div class="w3-card w3-margin w3-margin-top">
+   <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+   <!-- PLAY WITH SCALE AS NEEDED -->
+ <img src="images/Software.png" style="width:100%">
+   <div class="w3-container w3-white"><p></p>
+     <p align="center">A Servo (and our dreams) dangling</p>
+   </div>
+ </div><hr>
+ <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+
+
+
+ </div>
+<!-- END PICTURES -->
+
+
+<!-- Labels / tags -->
+ <div class="w3-card w3-margin">
+   <div class="w3-container w3-padding">
+   </div>
+   <div align=center class="w3-container w3-white">
+     <p><p></p>
+
+     </p>
+   </div>
+ </div>
+
+<!-- END Introduction Menu -->
 </div>
 
-<!-- Footer -->
-<footer id="footer">
+<!-- END GRID -->
+</div><br>
+ </div>
+
+
+  <!-- Footer -->
+  <footer id="footer">
     <div class="copyright">
-        <a a style="text-decoration:none;"  href="https://github.com/prava-d/RoboticArm">
-            <i class="fa fa-github-square fa-5x"></i>
-        </a>
-        <p></p>
-        <p>Ava Lakmazaheri, Benjamin Ziemann, Prava Dhulipalla, Samantha Eppinger, William Derksen</p>
+      <a a style="text-decoration:none;"  href="https://github.com/prava-d/RoboticArm">
+        <i class="fa fa-github-square fa-5x"></i>
+      </a>
+      <p></p>
+      <p>Ava Lakmazaheri, Benjamin Ziemann, Prava Dhulipalla, Samantha Eppinger, William Derksen</p>
     </div>
-</footer>
+  </footer>
 
+  <!-- Scripts -->
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/skel.min.js"></script>
+  <script src="../assets/js/util.js"></script>
+  <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+  <script src="../assets/js/main.js"></script>
+  <script>
 
-
-<!-- Javascript -->
-<script>
-
-//Navbar
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-}
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
-
-//Next javascript element
-</script>
+  //Navbar
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+  }
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
 
 </body>
 </html>

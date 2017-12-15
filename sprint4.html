@@ -7,11 +7,11 @@
 
 <html>
   <head>
-    <title>Tenacity - About</title>
+    <title>Tenacity - Process</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
       <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -74,14 +74,14 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <!-- Content of nav bar -->
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="mechanical.html">Mechanical</a>
-  <a href="electrical.html">Electrical</a>
-  <a href="software.html">Software</a>
-  <a href="team.html">Team</a>
-  <a href="blog.html">Blog</a>
-  <a href="gallery.html">Gallery</a>
+  <a href="../index.html">Home</a>
+  <a href="../about.html">About</a>
+  <a href="../mechanical.html">Mechanical</a>
+  <a href="../electrical.html">Electrical</a>
+  <a href="../software.html">Software</a>
+  <a href="../team.html">Team</a>
+  <a href="../blog.html">Blog</a>
+  <a href="../gallery.html">Gallery</a>
 
 </div>
 
@@ -104,48 +104,70 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
 
   <!-- Banner -->
-  <a style="text-decoration:none;" href="index.html">
-
-      <section id="banner" style="background: url(images/full.png);background-repeat: no-repeat; background-position: center top;background-size: cover;">
-       <h2><strong>About<br><h4>Tenacity</h4></strong></h2>
+  <a style="text-decoration:none;" href="../index.html">
+      <section id="banner" style="background: url(../images/blogheader.jpg);background-repeat: no-repeat; background-position: center top; background-size: cover">
+        <h2><strong>Process - Sprint 1<br><h4>Tenacity</h4></strong></h2>
       </section>
   </a>
 
   <!-- Minimized width -->
-  <div class="w3-content" style="max-width:1000px">
+  <div class="w3-content" style="max-width:1400px">
 
-    <p></p>
-    <p></p>
-    <h1><b>About</b></h1></br>
-    <h2>Our Vision</h2></br>
-    <p>We, team DeGra, began Principles of Engineering with a mission to create an autonomous robotic hand capable of manipulating a variety of objects with appropriate grip strength. The project idea drew us in for its extensive real-life applications and potential depth for technical exploration.</p>
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container">
+      <h3><b>A Slap on the Wrist</b></h3>
+      <h5>Benjamin Ziemann :: <span class="w3-opacity">December 10, 2017</span></h5>
+    </div>
 
-    <p>Over the past six weeks, we have challenged ourselves to dive deep into the engineering concepts behind mechanical, software, and electrical components of robotic hands. After many pivots, extensive physics discussions, and long nights by the whir of 3D printers, we present you with Tenacity.</p>
+    <div class="w3-container">
+      <p>Something we talked about early on was building out a full, actuated arm. With three days left, that wasn't going to happen though. We did however still to ascertain whether or not the hand had a grip on something.</p>
 
 
+        
 
-
-
-    <h2>Tenacity</h2></br>
-
-	 <p align="center"> <video width="640" height="480" controls>
-	  <source src="images/vid.mp4" type="video/mp4">
-
-	</video></p>
-
-    <p>Tenacity is a hybrid tendon-driven system with both active and passive actuation. It has three fingers and an opposable thumb, each of which can be independently controlled to achieve a variety of gripping configurations. Compliant fingertips mean that the hand shapes to whatever object it holds.
-    Tenacity is autonomous. With infrared and piezoelectric sensors, the hand is capable of detecting both when an object is within grasping range and how far to move before stopping for optimal grip performance.</p>
-
-    <p>For a detailed breakdown of Tenacity in its final state, refer to the Mechanical, Software, and Electrical subsystem pages.
-    For a peek into our process, and the hand’s many iterations over the past several weeks, head over to our blog!
-    </p>
-
-    <h2>Materials</h2></br>
-
-    <p align="center"><img src="images/bom.png" height=75% width=75%></p></br>
+    </div>
   </div>
+  <hr>
+</div>
+<!-- END BLOG ENTRIES -->
 
 
+
+
+<!-- BEGIN PICTURES -->
+<div class="w3-col l4">
+
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="../images/basecad.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">CAD of the base</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+ 
+
+
+
+ </div>
+<!-- END PICTURES -->
+
+
+
+
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+  </div>
 
   <!-- Footer -->
   <footer id="footer">
@@ -159,11 +181,11 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/skel.min.js"></script>
-  <script src="assets/js/util.js"></script>
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/skel.min.js"></script>
+  <script src="../assets/js/util.js"></script>
   <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-  <script src="assets/js/main.js"></script>
+  <script src="../assets/js/main.js"></script>
   <script>
 
   //Navbar

@@ -1,0 +1,352 @@
+<!DOCTYPE HTML>
+<!--
+  Typify by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+
+<html>
+  <head>
+    <title>Tenacity - Sprint 2</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  </head>
+
+
+<!-- START NAV BAR -->
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+</style>
+<body class="w3-light-grey">
+
+
+
+
+
+<!-- Content of nav bar -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+  <a href="mechanical.html">Mechanical</a>
+  <a href="electrical.html">Electrical</a>
+  <a href="software.html">Software</a>
+  <a href="process.html">Process</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="team.html">Team</a>
+</div>
+
+
+<!-- Box around nav bar-->
+<span style="font-size:25px;cursor:pointer;float:right;color:white;font-weight:bold;background-color: rgba(128, 0, 0, 0.6);
+      text-shadow: 2px 2px #000000;
+      box-shadow:         inset 0 0 25px #000000;
+
+      /*border-style: double solid;
+      border-width: 4px 1px;*/
+      line-height: .01em;
+      /*margin: 0 auto .01em;*/
+      padding: .75em;
+      width: 10%;" onclick="openNav()">&#9776; Menu</span>
+<!-- END NAV BAR -->
+
+<body>
+
+
+
+    <!-- Banner -->
+	<a style="text-decoration:none;" href="index.html">
+  		<section id="banner" style="background: url(images/processbanner.PNG);background-repeat: no-repeat; background-position: center top; background-size: cover">
+    	<h2><strong>Sprint 2 Process<br><h4>Tenacity</h4></strong></h2>
+    	</section>
+	</a>
+
+  <!-- Minimized width -->
+  <div class="w3-content" style="max-width:1400px">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container">
+      <h3><b>Sprint 2</b></h3>
+
+    </div>
+
+    <div class="w3-container">
+     <p>Sprint 2, was slightly underwhelming, but still a success.  In this sprint we started to learn what mechanical challenges would make this project difficult and construct an outline for essentially the entire software system other than control code.
+</p>
+     <p>We primarily focused on researching different ways to achieve the motion of the fingers that we wanted along with a lot of prototyping and simulation of these different finger designs.  We parsed through a lot of different papers. Through these papers we learned a lot of different mechanical setups for the finger.</p>
+     <p>The main mechanical deliverable for this sprint was the knowledge gained about the variety of approaches to mechanical finger design and the numerous finger designs tested.
+</p>
+     <p>The first of these designs was the 4-bar linkage finger.  This finger achieved the same motion as the original flexible fingers, except it required a lot less motion in order to pull down the finger, allowing for faster finger movement.  However, this motion wasn’t too easy to expand upon due to the somewhat unpredictable and complex motion of chained 4-bar linkages.</p>
+     <p>Another major design prototype was the Pulley-Tendon Finger, which ended up being the general direction we tried to head for the rest of the project.  This finger design was pretty general in that by adding or removing actuated tendons (motor driven tendons) and removing or replacing with passive tendons (elastic), the designer could achieve a wide variety of finger systems, like under constrained, under actuated, or over actuated.  We generally aimed for under actuated, but this design let us better define how we wanted our finger to move using these passive tendons that would resist movement in specific ways depending on how they were strung.
+</p>
+     <p>Lastly, we tested a finger tip as supposed to the actual finger to try to increase friction and reduce slippage.  This was the bulbous finger, which was a balloon filled with some kind of small powdery substance (in this case coffee powder, sand would also work).  This finger type allowed for more friction on the grippers end effector, thus allowing for a better, though not stronger, grip.
+</p>
+     <p>We did minimal reflection in terms of our actual Sprint 1 feedback, but had a team retrospective about our process and the final project. The comments about the changes that could be made to the project were expected - just aspects that could be changed in order to make the systems. Our team retrospective revealed a dissatisfaction with meeting times and members being late, which we addressed at this point. The fact that software and electrical had minimal things to do was also brought up at this point, and we brainstormed things to give more tasks. Unfortunately, looking back now, trying to scope up these subsystems is hard with the way we framed our MVP and original vision. Although it’s true that we tried, it’s also true that these tasks would get pushed off until what we deemed the ‘more important tasks’ - such as getting the robotic arm to actuate effectively - were happening.
+</p>
+     <p>Within the comments about changes that could be made to our actual design, one was integrating more bioinspiration by doing research. We’ll discuss the fruits of this labor later - but as for the actual research, it proved to be fairly helpful and cool! Unfortunately, trying to simplify PhD papers’ mechanical design so we could actually use it is a very difficult process. Also, we fell in the trap of becoming so focused on researching the perfect finger, we had actually dedicated too much time into it. Research is very helpful, but in a sprint-based class like PoE, where things have to be completed fairly rapidly, we probably shouldn’t have spent time exclusively researching.
+</p>
+     <p>It took us about half of a sprint to read through enough research papers to start making decisions about which directions were the right directions to go.  Then we pivoted towards making prototypes and simulations.  However, because of this by the time we had a pretty good idea of what kind of fingers we wanted the hand to be made of, we had already spent most of our sprint time.  So making a mechanical prototype for the entire hand was near impossible.  We tried to go through the process of doing it, but there simply wasn’t enough time.
+</p>
+     <p>The end of this sprint was somewhat disappointing due to the lack of a full hand.  We had done a lot of important understanding and work, however the fact that it wasn’t all integrated made it feel like much less was accomplished and dragged down our team health.  Due to this, our goal for the next sprint was to make sure to have an integrated product that was a significant step forward from our first design.
+</p>
+     <p>In the future, having a more structured research sprint would be helpful.  We generally learned as we went and made decisions in a somewhat unstructured way.  A more clear process and timeboxed research session, would have allowed us to keep in mind what was helpful and shoot more towards creating a concrete deliverable by the end of the sprint.  This isn’t to say what we did in the sprint wasn’t helpful, because it very much was.  This kind of structure would just help us feel a bit better about how much we did and why we didn’t end up making an integrated hand.
+</p>
+     <p>In this sprint we also setup all of the integrated systems for the raspberry pi (other than talking to the arduino) as well as testing out Open CV and making mechanical simulations of the researched finger designs.
+</p>
+     <p>For the raspberry pi, we managed to setup the default raspberry pi as well as install Open CV onto it.  We created a VNC connection to the raspberry pi for easy use on our own computers, and created a web app control for the raspberry pi.
+</p>
+     <p>We setup Open CV in C++ on our own computers to start, which was a bit challenging compared to setting it up in python.  Once that was working, we designed some simple code in order to test Open CV and make sure everything was working.  After some this, we made a more extensive test code (red / green flag detection) in order to demo starting and stopping the arm using Open CV.  This worked well on the computer and, once everything was set up, the Raspberry Pi as well.
+</p>
+     <p>Software and electrical, because they weren’t integrated with mechanical, had quite the time this sprint. Not much reflection can be done on this front, because a lot actually managed to happen in this sprint. We managed to set-up a lot, including the Raspberry Pi, Open CV, and simulations.  Additionally, we had started on the website. Overall, this sprint, software and electrical had really found their stride. And some research was also done as well! But mostly on the ‘how stuff should be done’ front, rather than actual electrical or software design.  The Raspberry Pi and Open CV setup and testing, allowed us to feel ready to attack computer vision and the rest of the software pieces of the project for the next sprint.  This really set us up for success.</p>
+<p>Click <a href ="https://docs.google.com/presentation/d/13i-zxWJnYnTVBFtKOYJVXWiR58F3-K2HaEhXR6ADyZY/edit?usp=sharing">here</a> to see the slides from our Sprint 2 Design Review:
+</p>
+
+
+
+    </div>
+  </div>
+  <hr>
+</div>
+<!-- END BLOG ENTRIES -->
+
+
+
+
+<!-- BEGIN PICTURES -->
+<div class="w3-col l4">
+
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="images/Finger1.jpg" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">4-Bar Linkage Finger
+</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="images/Finger2.jpg" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Tendon Driven Pulley Finger
+</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="images/Finger3.jpg" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Bulbous Finger
+</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="images/Research.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Pictures of Research Papers we Read
+</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="images/Plusses.jpg" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Plusses
+</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="images/Deltas.jpg" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Deltas
+</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="images/FingerPrototypes.jpg" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Physical Mechanical Accomplishments
+
+</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="images/RaspberryPi.jpg" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Raspberry Pi
+</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="images/OpenCV_Logo.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">OpenCV - the computer vision library
+</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="images/ColorTest.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Online example of Color detection code (Our results looked quite similar to this)
+
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+
+
+
+
+
+
+
+ </div>
+<!-- END PICTURES -->
+
+
+ <!-- Labels / tags -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+
+    </div>
+    <div align=center class="w3-container w3-white">
+      <p><p></p>
+
+
+      </p>
+    </div>
+  </div>
+
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="copyright">
+      <a a style="text-decoration:none;"  href="https://github.com/prava-d/RoboticArm">
+        <i class="fa fa-github-square fa-5x"></i>
+      </a>
+      <p></p>
+      <p>Ava Lakmazaheri, Benjamin Ziemann, Prava Dhulipalla, Samantha Eppinger, William Derksen</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/skel.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+  <script src="assets/js/main.js"></script>
+  <script>
+
+  //Navbar
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+  }
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+
+</body>
+</html>

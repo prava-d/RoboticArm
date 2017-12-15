@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<!--
+	Typify by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+
+<html>
+	<head>
+		<title>Tenacity</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="assets/css/main.css" />
+	    <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	</head>
+
+
+<!-- START NAV BAR -->
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+</style>
+<body class="w3-light-grey">
+
+
+
+
+
+<!-- Content of nav bar -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+  <a href="mechanical.html">Mechanical</a>
+  <a href="electrical.html">Electrical</a>
+  <a href="software.html">Software</a>
+  <a href="process.html">Process</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="team.html">Team</a>
+
+</div>
+
+
+<!-- Box around nav bar-->
+<span style="font-size:25px;cursor:pointer;float:right;color:white;font-weight:bold;background-color: rgba(128, 0, 0, 0.6);
+			text-shadow: 2px 2px #000000;
+			box-shadow:         inset 0 0 25px #000000;
+
+			/*border-style: double solid;
+			border-width: 4px 1px;*/
+			line-height: .01em;
+			/*margin: 0 auto .01em;*/
+			padding: .75em;
+			width: 10%;" onclick="openNav()">&#9776; Menu</span>
+<!-- END NAV BAR -->
+
+<body>
+
+
+
+	<!-- Banner -->
+	<a style="text-decoration:none;" href="index.html">
+  		<section id="banner" style="background: url(images/mechbanner.jpg);background-repeat: no-repeat; background-position: center top; background-size: cover">
+    	<h2><strong>Tenacity<br><h4>Robotic Gripper</br>Team DeGra - PoE 2017</h4></strong></h2>
+    	</section>
+	</a>
+
+	<!-- Minimized width -->
+	<div class="w3-content" style="max-width:1400px">
+
+<!-- Content-->
+    <section id="one" class="wrapper special">
+        <div class="inner">
+            <header class="major">
+                <h2>Subsystems</h2>
+            </header>
+            <div class="features">
+
+                    <div class="feature">
+                <a style="text-decoration:none;"  href="mechanical.html">
+                        <i class="fa fa-wrench"></i>
+                        <h3>Mechanical</h3>
+                        <p>Learn more about finger mechanics, tendon-driven systems, and everything else that makes Tenacity move! </p>
+                </a>
+                    </div>
+
+                    <div class="feature">
+                <a style="text-decoration:none;"  href="software.html">
+                        <i class="fa fa-laptop"></i>
+                        <h3>Software</h3>
+                        <p>Read about our control code, computer vision, and cool simulations!</p>
+                </a>
+                    </div>
+
+
+                    <div class="feature">
+                <a style="text-decoration:none;"  href="electrical.html">
+                        <i class="fa fa-bolt"></i>
+                        <h3>Electrical</h3>
+                        <p>Find out more about the sensory feedback that helps make Tenacity autonomous!</p>
+                </a>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Footer -->
+<footer id="footer">
+    <div class="copyright">
+        <a a style="text-decoration:none;"  href="https://github.com/prava-d/RoboticArm">
+            <i class="fa fa-github-square fa-5x"></i>
+        </a>
+        <p></p>
+        <p>Ava Lakmazaheri, Benjamin Ziemann, Prava Dhulipalla, Samantha Eppinger, William Derksen</p>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
+<script>
+
+//Navbar
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+</body>
+</html>

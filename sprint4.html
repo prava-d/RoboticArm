@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<!--
+  Typify by TEMPLATED
+  templated.co @templatedco
+  Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+
+<html>
+  <head>
+    <title>Tenacity - Process</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  </head>
+
+
+<!-- START NAV BAR -->
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+</style>
+<body class="w3-light-grey">
+
+
+
+
+
+<!-- Content of nav bar -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+  <a href="mechanical.html">Mechanical</a>
+  <a href="electrical.html">Electrical</a>
+  <a href="software.html">Software</a>
+  <a href="process.html">Process</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="team.html">Team</a>
+</div>
+
+
+<!-- Box around nav bar-->
+<span style="font-size:25px;cursor:pointer;float:right;color:white;font-weight:bold;background-color: rgba(128, 0, 0, 0.6);
+      text-shadow: 2px 2px #000000;
+      box-shadow:         inset 0 0 25px #000000;
+
+      /*border-style: double solid;
+      border-width: 4px 1px;*/
+      line-height: .01em;
+      /*margin: 0 auto .01em;*/
+      padding: .75em;
+      width: 10%;" onclick="openNav()">&#9776; Menu</span>
+<!-- END NAV BAR -->
+
+<body>
+
+
+
+    <!-- Banner -->
+  <a style="text-decoration:none;" href="index.html">
+      <section id="banner" style="background: url(images/processbanner.PNG);background-repeat: no-repeat; background-position: center top; background-size: cover">
+      <h2><strong>Sprint 4 Process<br><h4>Tenacity</h4></strong></h2>
+      </section>
+  </a>
+
+  <!-- Minimized width -->
+  <div class="w3-content" style="max-width:1400px">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container">
+      <h3><b>Sprint 4</b></h3>
+
+    </div>
+
+    <div class="w3-container">
+     <p>Sprint 4, was… we don’t really talk about sprint 4 anymore.</p>
+
+      <p>After receiving feedback from the previous sprint and somehow not getting wrecked for our a) lack of meeting our MVP goals and b) our terrible communication, like really we were all so tired and wanted stuff to be over, we decided to start anew. Originally we had this whole plan to use strain gauges and built a mount - the mount got built in the last day to a reasonable degree, but we realized any further electrical iterations was unnecessary and that a lot of our electrical had actually been done in the first sprint - we just needed to apply it to the new thing being built.</p>
+      <p>For Sprint 4, we demo-ed a better version of Sprint 3 - namely, replacing the arm/palm to something more suitable for what we wanted. It was a really cool design, but had some pitfalls. One, because we had specified we wanted something ‘aesthetic’ as our end goal, it seemed that mounting the Servos on the outside was not doing that. However, stringing the Servos on the inside was very difficult. Also, it turns out that a huge problem with our system is TENSION. We learned that unless we created a tensioning system, no matter how tight we set the tendons, it just wouldn’t work. We tried fishing line, braided fishing line, string, surgical tubing, string with surgical tubing, braiding fishing line with surgical tubing - basically, everything except for actually ripping out the tendons from out body.</p>
+      <p>On the Sprint 4 ‘mini check-in,’ the professors informed us that there is bound to be slack in a physical system that is based on this sort of ‘tendon/string/line’ actuation, and we should really have something that would allow us to reduce the slack - e.g. a Servo mount that moves up and down, based on how tight or loose the tendons were going.</p>
+      <p>Software primarily worked on getting the mechanical system to work in the first place, as well as a bunch of things that never ended up getting integrated - like a GUI output, a more improved object tracking system, and interfacing between C++ and Serial. More information can be found in the software subsystems pages. Essentially, software did what we had done all semester - try to do our own things, but place them on the back burner until seemingly more important things like making stuff work came into play. It was here we realized that huh, maybe this was a really ineffective way of doing things, because we have three software and not everybody needs to be there to get it to work, but there we were.</p>
+      <h2>Demo Day</h2>
+      <p>We didn’t manage to improve much from Sprint 4. We had tried more types of tendons and different ways of tying them, but the lack of a tensioning system just meant that our results were unfruitful. We also didn’t manage to fully integrate all the cool code Software got to write. Because we relied so much on 3D printed parts, we hesitated doing anything huge mechanically, because that would mean a major overhaul of our system.</p>
+      <p>However, one thing we did do is mount our arm and hide as much of the electronics as possible. This way, our robotic arm was mounted more horizontally and it could truly prove that it can pick up objects (kind of, sort of). The fruits of our labor here can be seen in the final subsystems page, but as for actual reflection - I think we all agreed that all of us had worked hard, but maybe not effectively, on the project. We also knew we were all somewhat disappointed in our final product, but happy Aaron Hoover was not disappointed in us. In the end, we were glad it was done . . .</p>
+      <p>Except it wasn’t. We had a whole website to complete! Ahh! And that was quite a process, zero further reflection necessary. As for the fruits of our labor from that - well, you’re looking at it!</p>
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+ </div>
+<!-- END PICTURES -->
+
+
+ <!-- Labels / tags -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+
+    </div>
+    <div align=center class="w3-container w3-white">
+      <p><p></p>
+
+
+      </p>
+    </div>
+  </div>
+
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="copyright">
+      <a a style="text-decoration:none;"  href="https://github.com/prava-d/RoboticArm">
+        <i class="fa fa-github-square fa-5x"></i>
+      </a>
+      <p></p>
+      <p>Ava Lakmazaheri, Benjamin Ziemann, Prava Dhulipalla, Samantha Eppinger, William Derksen</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/skel.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+  <script src="assets/js/main.js"></script>
+  <script>
+
+  //Navbar
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+  }
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+
+</body>
+</html>

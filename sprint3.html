@@ -7,7 +7,7 @@
 
 <html>
   <head>
-    <title>Tenacity - Process</title>
+    <title>Tenacity - Sprint 3</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -103,12 +103,12 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
 
 
-  <!-- Banner -->
-  <a style="text-decoration:none;" href="../index.html">
-      <section id="banner" style="background: url(../images/blogheader.jpg);background-repeat: no-repeat; background-position: center top; background-size: cover">
-        <h2><strong>Process - Sprint 1<br><h4>Tenacity</h4></strong></h2>
-      </section>
-  </a>
+    <!-- Banner -->
+	<a style="text-decoration:none;" href="index.html">
+  		<section id="banner" style="background: url(images/processbanner.PNG);background-repeat: no-repeat; background-position: center top; background-size: cover">
+    	<h2><strong>Sprint 3 Process<br><h4>Tenacity</h4></strong></h2>
+    	</section>
+	</a>
 
   <!-- Minimized width -->
   <div class="w3-content" style="max-width:1400px">
@@ -118,15 +118,30 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <!-- Blog entry -->
   <div class="w3-card-4 w3-margin w3-white">
     <div class="w3-container">
-      <h3><b>A Slap on the Wrist</b></h3>
-      <h5>Benjamin Ziemann :: <span class="w3-opacity">December 10, 2017</span></h5>
+      <h3><b>Sprint 3</b></h3>
     </div>
 
     <div class="w3-container">
-      <p>Something we talked about early on was building out a full, actuated arm. With three days left, that wasn't going to happen though. We did however still to ascertain whether or not the hand had a grip on something.</p>
+      <p>After the last sprint feeling a bit slow and not achieving the deliverable we were expecting at the end of it, this sprint we decided to go full force on creating a mechanical hand.  Unfortunately, while we gave it our best effort and really put our all into this sprint, numerous complications caused our design to fail in the end t our research to not fruitfully contribute to our hand design.  This was a real bummer, because in the last sprint we could justify to ourselves that we didn’t have a new and improved product due to the finger design research being the focus of the sprint, however this time we were putting significant work into making a whole hand, and we ended up not creating a design much different from the original.</p>
+
+      <p>The real downfall of Sprint 3 was our individual health at the end of it. None of us had been sleeping regularly for the four days coming into the Sprint 3 Review, and on the night of, we all had a cumulative total of five hours of sleep - to reiterate, if we added up the hours we slept right before the Sprint 3 Review, it would significantly less than the amount of sleep a single person should get a night, let alone five people. Also in this sprint, we learned that some of our friends were really confused by our team dynamic to the point where they thought we weren’t okay with each other. Things left unsaid? People so tired they have no filter? Who even knows...</p>
+
+      <p>Mechanically, three prototypes was made. The first one was modelled after the universal gripper, and utilized balloons filled with coffee grounds in order to prevent motors from stalling and have more surface area for gripping. Our tendon system was pretty good, making use of active and passive tendons.</p>
+
+      <p>We realized this wouldn’t work because in order to fix the Servos, the palm/arm needed to be large, which was not optimal for our purposes. So then, we pivoted to using the Festo fintails and a different hand design, for which the fingers were on the same plane as the actual palm.</p>
+
+      <p>It ended up being larger than anticipated, but this largeness made us realize that this was the only way the Servos would fit together. So this wouldn’t do.</p>
+      <p>Totally not last minute, we pivoted to something that worked: Sprint 1. We used to same design and modified it a bit, using the same fingers and pulley system to drive it. It was better!</p>
+      <p>In terms of electrical, we wired up the wires how we always did - with the IR and Touch Sensors. See our Electrical/Firmware page for info.</p>
+      <p>For software, we utilized object tracking algorithms in C++. We used a premade algorithm in the OpenCV library, called MIL. This algorithm was very effective at tracking the object, but less effective at determining when the object was gone. Here are three still from moving an object. Note the use of a blank background.</p>
+      <p>Also note that the color is very similar, but the object tracking algorithm is robust enough to find it! Yeah! It’s so great that what we spent three weeks on ended up being able to be written in a single day really easily . . . yep.</p>
+      <p>We also wrote control code, which didn’t change much logically. See our software subsystems for more information.</p>
+      <p>Anyways, Sprint 3 can be categorized by ineffective work habits. Yeah sure, software and mechanical ended up doing a lot of things, but a lot of things ended up not working - so we had to pivot down at the last minute. This Sprint proved one could be consistently working, but not effectively working. This can be proven by the fact that despite the very minimal amount of sleep we had gotten, we still weren’t able to give a very fleshed-out product. Also in this sprint, we realized we forgoed doing anything in terms of electrical incrementation.</p>
+      <p>We had done a small team retrospective for Sprint 2, but nothing fruitful ever came from it. At this point, we stopped doing effective teaming strategies, like communicating what we were doing (despite this being something we all said we would work on), when we were meaning, or being honest about how we actually felt about the way things were going in a healthy manner. In fact, the only thing that this Sprint was actually successful in was the fact that our website was poppin’ (formatting) and that content (like really great blog posts) was being uploaded to it. </p>
+      <p>This Sprint somewhat ruined our faith in ourselves. At least one member declared “I quit this team,” but more members thought about it. It was because of the same “effective work” idea - we had worked a lot, but not effectively, causing us to be burned out without even creating a product that we were all proud of.</p>
 
 
-        
+
 
     </div>
   </div>
@@ -145,14 +160,46 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <div class="w3-card w3-margin w3-margin-top">
     <!-- REPLACE THIS PATH WITH PICTURE PATH -->
     <!-- PLAY WITH SCALE AS NEEDED -->
-  <img src="../images/basecad.png" style="width:100%">
+  <img src="images/Mechanical1.png" style="width:100%">
     <div class="w3-container w3-white"><p></p>
-      <p align="center">CAD of the base</p>
+      <p align="center">He’s a little chunky!</p>
     </div>
   </div><hr>
   <!-- COPY ABOE THIS FOR A NEW PICTURE -->
 
- 
+   <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="images/Mechanical2.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">CAD vs real life</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+   <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+    <!-- PLAY WITH SCALE AS NEEDED -->
+  <img src="images/Mechanical3.png" style="width:100%">
+    <div class="w3-container w3-white"><p></p>
+      <p align="center">Look at how happy we are . . . happy . . . yes.</p>
+    </div>
+  </div><hr>
+  <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
+  <!-- COPY BELOW THIS FOR A NEW PICTURE -->
+ <div class="w3-card w3-margin w3-margin-top">
+   <!-- REPLACE THIS PATH WITH PICTURE PATH -->
+   <!-- PLAY WITH SCALE AS NEEDED -->
+ <img src="images/Software.png" style="width:100%">
+   <div class="w3-container w3-white"><p></p>
+     <p align="center">A Servo (and our dreams) dangling</p>
+   </div>
+ </div><hr>
+ <!-- COPY ABOE THIS FOR A NEW PICTURE -->
+
 
 
 
@@ -160,14 +207,24 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <!-- END PICTURES -->
 
 
+<!-- Labels / tags -->
+ <div class="w3-card w3-margin">
+   <div class="w3-container w3-padding">
+   </div>
+   <div align=center class="w3-container w3-white">
+     <p><p></p>
 
+     </p>
+   </div>
+ </div>
 
 <!-- END Introduction Menu -->
 </div>
 
 <!-- END GRID -->
 </div><br>
-  </div>
+ </div>
+
 
   <!-- Footer -->
   <footer id="footer">
